@@ -310,8 +310,8 @@
         }
     },
     "LOGIN": {
-        "PAGE_TITLE": "Giriş - Taiga",
-        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu Taiga ya giriş yapılıyor."
+        "PAGE_TITLE": "Giriş - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu ThreeFold Circles ya giriş yapılıyor."
     },
     "AUTH": {
         "INVITED_YOU": "sizi şu projeye davet etti",
@@ -320,7 +320,7 @@
         "CREATE_ACCOUNT": "buradan ücretsiz bir hesap oluşturun"
     },
     "LOGIN_COMMON": {
-        "HEADER": "Zaten bir Taiga hesabım var",
+        "HEADER": "Zaten bir ThreeFold Circles hesabım var",
         "PLACEHOLDER_AUTH_NAME": "Kullanıcı adı yada e-posta (büyük küçük harf duyarlı)",
         "LINK_FORGOT_PASSWORD": "Unuttunuz mu?",
         "TITLE_LINK_FORGOT_PASSWORD": "Parolanızı mı unuttunuz?",
@@ -331,14 +331,14 @@
     },
     "LOGIN_FORM": {
         "ERROR_AUTH_INCORRECT": "Umpa Lumpalarımıza göre, kullanıcı adınızı / e-posta adresinizi ya da parolanızı yanlış girdiniz.",
-        "SUCCESS": "Umpa Lumpalarımız çok mutlu oldular, Taiga ya hoşgeldiniz."
+        "SUCCESS": "Umpa Lumpalarımız çok mutlu oldular, ThreeFold Circles ya hoşgeldiniz."
     },
     "REGISTER": {
-        "PAGE_TITLE": "Kayıt ol - Taiga",
-        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu Taiga da hesabınızı oluşturun."
+        "PAGE_TITLE": "Kayıt ol - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu ThreeFold Circles da hesabınızı oluşturun."
     },
     "REGISTER_FORM": {
-        "TITLE": "Yeni bir Taiga hesabı oluştur (ücretsiz)",
+        "TITLE": "Yeni bir ThreeFold Circles hesabı oluştur (ücretsiz)",
         "PLACEHOLDER_NAME": "Bir kullanıcı adı seçin (büyük küçük harf duyarlı)",
         "PLACEHOLDER_FULL_NAME": "Tam adınızı girin",
         "PLACEHOLDER_EMAIL": "E-posta adresiniz",
@@ -348,8 +348,8 @@
         "LINK_LOGIN": "Zaten üye misiniz? Giriş yapın"
     },
     "FORGOT_PASSWORD": {
-        "PAGE_TITLE": "Parolayı unuttum - Taiga",
-        "PAGE_DESCRIPTION": "Kullanıcı adınızı ya da e-posta adresinizi girerek yeni bir parola edinin ve  Taiga ya yeniden erişin."
+        "PAGE_TITLE": "Parolayı unuttum - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Kullanıcı adınızı ya da e-posta adresinizi girerek yeni bir parola edinin ve  ThreeFold Circles ya yeniden erişin."
     },
     "FORGOT_PASSWORD_FORM": {
         "TITLE": "Eyvah, parolanızı mı unuttunuz?",
@@ -362,7 +362,7 @@
         "ERROR": "Honki ponkilerimize göre, siz henüz bir kayıt yaptırmamış durumdasınız."
     },
     "CHANGE_PASSWORD": {
-        "PAGE_TITLE": "Parolayı değiştirin - Taiga",
+        "PAGE_TITLE": "Parolayı değiştirin - ThreeFold Circles",
         "SECTION_NAME": "Parolayı değiştir",
         "FIELD_CURRENT_PASSWORD": "Şimdiki parola",
         "PLACEHOLDER_CURRENT_PASSWORD": "Şimdiki parolanız (boş da olabilir eger parola belirlemediyseniz)",
@@ -373,7 +373,7 @@
         "ERROR_PASSWORD_MATCH": "Parolalar uyuşmuyor"
     },
     "CHANGE_PASSWORD_RECOVERY_FORM": {
-        "TITLE": "Yeni bir Taiga parolası oluşturun",
+        "TITLE": "Yeni bir ThreeFold Circles parolası oluşturun",
         "SUBTITLE": "Bir de, demir yönünden zengin yiyecekler yemek beyninize iyi gelebilir :P",
         "PLACEHOLDER_NEW_PASSWORD": "Yeni parola",
         "PLACEHOLDER_RE_TYPE_NEW_PASSWORD": "Yeni parolayı yeniden girin",
@@ -382,17 +382,17 @@
         "SUCCESS": "Honki ponkilerimiz yeni parolanızı kaydetti. <br /> Yeni parolanız ile <strong>giriş yapın</strong>"
     },
     "INVITATION": {
-        "PAGE_TITLE": "Davet kabulü - Taiga",
-        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu Taiga dan yapılan daveti kabul edin."
+        "PAGE_TITLE": "Davet kabulü - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Yeni girişimciler, çevik geliştiriciler ve tasarımcılar için çalışmaları gerçekten eğlenceli hale getiren basit, güzel bir proje yönetim platformu ThreeFold Circles dan yapılan daveti kabul edin."
     },
     "INVITATION_LOGIN_FORM": {
         "NOT_FOUND": "Umpa Lumpalarımız davetiyenize ulaşamıyor.",
         "SUCCESS": "Projeye katılımınız başarıyla gerçekleşti.  {{project_name}} 'ye hoş geldiniz."
     },
     "HOME": {
-        "PAGE_TITLE": "AnaSayfa - Taiga",
-        "PAGE_DESCRIPTION": "Atanmış ve izlenen kullanıcı hikayeleri, işler ve sorunların yanı sıra ana projeleriniz için Taiga ana sayfanız",
-        "EMPTY_WORKING_ON": "<strong>Burası bomboş, değil mi?</strong> Taiga ile çalışmaya başlayınca burada hikayeler, isler ve sorunları göreceksin.",
+        "PAGE_TITLE": "AnaSayfa - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Atanmış ve izlenen kullanıcı hikayeleri, işler ve sorunların yanı sıra ana projeleriniz için ThreeFold Circles ana sayfanız",
+        "EMPTY_WORKING_ON": "<strong>Burası bomboş, değil mi?</strong> ThreeFold Circles ile çalışmaya başlayınca burada hikayeler, isler ve sorunları göreceksin.",
         "EMPTY_WATCHING": "Projelerinizdeki Kullanıcı Hikayelerini, İşleri ve Sorunları <strong>takip edin</strong> ve değişikliklerden haberdar olun :) ",
         "EMPTY_PROJECT_LIST": "Henüz bir projeniz yok",
         "WORKING_ON_SECTION": "Üzerinde çalışılıyor",
@@ -442,7 +442,7 @@
         }
     },
     "PROJECTS": {
-        "PAGE_TITLE": "Projelerim - Taiga",
+        "PAGE_TITLE": "Projelerim - ThreeFold Circles",
         "PAGE_DESCRIPTION": "Tüm projelerinizi içeren bir liste, yenide düzenle ya da yeni bir tane yarat.",
         "MY_PROJECTS": "Projelerim"
     },
@@ -539,7 +539,7 @@
             "RECRUITING": "Bu proje insan arıyor mu?",
             "RECRUITING_MESSAGE": "Ne aramıştınız?",
             "RECRUITING_PLACEHOLDER": "Aradığınız özellikleri yazın",
-            "FEEDBACK": "Taiga kullanıcılarından geri bildirim almak ister misiniz?",
+            "FEEDBACK": "ThreeFold Circles kullanıcılarından geri bildirim almak ister misiniz?",
             "PUBLIC_PROJECT": "Açık Proje",
             "PRIVATE_PROJECT": "Gizli proje",
             "PRIVATE_OR_PUBLIC": "Açık ve özel projeler arasındaki fark nedir?",
@@ -675,7 +675,7 @@
             "WARNING_DELETE_ROLE": "Be careful! All role estimations will be removed",
             "ERROR_DELETE_ALL": "Bütün değerleri silemezsiniz",
             "EXTERNAL_USER": "Dış kullanıcı",
-            "NOTE_EXTERNAL_USERS": "<strong>Note:</strong> by External User we mean any anonymous user not belonging to the Taiga platform, including search engines. Please use this role with care."
+            "NOTE_EXTERNAL_USERS": "<strong>Note:</strong> by External User we mean any anonymous user not belonging to the ThreeFold Circles platform, including search engines. Please use this role with care."
         },
         "THIRD_PARTIES": {
             "SECRET_KEY": "Gizli anahtar",
@@ -825,7 +825,7 @@
             "CONTACTS": "İrtibat Kişileri",
             "CONTACTS_EMPTY": "{{username}}  kullanıcısının henüz irtibat kişileri yok",
             "CURRENT_USER_CONTACTS_EMPTY": "Henüz irtibat kişileriniz yok",
-            "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "Taiga ile çalışan kişiler otomatik olarak irtibat kişileriniz olacaktır",
+            "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "ThreeFold Circles ile çalışan kişiler otomatik olarak irtibat kişileriniz olacaktır",
             "TABS": {
                 "ACTIVITY_TAB": "Zaman Çizelgesi",
                 "ACTIVITY_TAB_TITLE": "Bu kullanıcı için tüm eylemleri göster",
@@ -892,7 +892,7 @@
             "ACTION_CREATE_PROJECT": "Proje Oluştur",
             "MANAGE_PROJECTS": "Projeleri yönet",
             "TITLE_CREATE_PROJECT": "Proje oluştur",
-            "HELP_TITLE": "Taiga Destek Sayfası",
+            "HELP_TITLE": "ThreeFold Circles Destek Sayfası",
             "HELP": "Yardım",
             "HOMEPAGE": "Ana sayfa",
             "FEEDBACK_TITLE": "Geribildirim Gönder",
@@ -946,7 +946,7 @@
             "DUPLICATE": "Projeyi Kopayala",
             "DUPLICATE_DESC": "Start clean and keep your configuration",
             "IMPORT": "Projeyi İçe Aktar",
-            "IMPORT_DESC": "Import your project from multiple platforms into Taiga",
+            "IMPORT_DESC": "Import your project from multiple platforms into ThreeFold Circles",
             "INVITE": "Projeye davet et",
             "SOLO_PROJECT": "You'll be alone in this project",
             "INVITE_LATER": "(You'll be able to invite more members later)",
@@ -968,7 +968,7 @@
         },
         "IMPORT": {
             "TITLE": "Projeyi İçe Aktar",
-            "DESCRIPTION": "Import your project from multiple platforms into Taiga",
+            "DESCRIPTION": "Import your project from multiple platforms into ThreeFold Circles",
             "ASYNC_IN_PROGRESS_TITLE": "Bizim honki ponkiler projenizi içeriye aktarıyor",
             "ASYNC_IN_PROGRESS_MESSAGE": "Bu işlem bir kaç dakika sürecek <br/> Hazır olduğunda bir e-posta göndereceğiz",
             "UPLOAD_IN_PROGRESS_MESSAGE": "{{totalSize}} in {{uploadedSize}} kadarı karşıya yüklendi",
@@ -979,17 +979,17 @@
             "SYNC_SUCCESS": "Projeniz başarıyla içe aktarıldı",
             "IMPORT": "İçe Aktar",
             "WHO_IS": "Their tasks will be assigned to ...",
-            "WRITE_EMAIL": "Or if you want, write the email that this user uses in Taiga",
+            "WRITE_EMAIL": "Or if you want, write the email that this user uses in ThreeFold Circles",
             "SEARCH_CONTACT": "Or if you want, search in your contacts",
-            "WRITE_EMAIL_LABEL": "Write the email that this user uses in Taiga",
+            "WRITE_EMAIL_LABEL": "Write the email that this user uses in ThreeFold Circles",
             "ACCEEDE": "Acceede",
             "PROJECT_MEMBERS": "Proje Üyeleri",
-            "PROCESS_DESCRIPTION": "Tell us who from Taiga you want to assign the tasks of {{platform}}",
+            "PROCESS_DESCRIPTION": "Tell us who from ThreeFold Circles you want to assign the tasks of {{platform}}",
             "MATCH": "Is <strong>{{user_external}}</strong> the same person as <strong>{{user_internal}}</strong>?",
             "CHOOSE": "Kullanıcı seçin",
             "LINKS": "Links with {{platform}}",
             "LINKS_DESCRIPTION": "Do you want to keep the link of each item with the original {{platform}} card?",
-            "WARNING_MAIL_USER": "Note that if the user does not have a Taiga account we will not be able to assign the tasks to him.",
+            "WARNING_MAIL_USER": "Note that if the user does not have a ThreeFold Circles account we will not be able to assign the tasks to him.",
             "ASSIGN": "Ata",
             "PROJECT_SELECTOR": {
                 "NO_RESULTS": "Arama kriterlerinize uyan bir kayıt bulunamadı",
@@ -1032,11 +1032,11 @@
                 "DESCRIPTION": "Hala belirlenemeyen kişiler var. Bu kişilere atanmış kartlar atanmamış olarak kalacak. Veri kaybetmemek için ilişkili kişileri kontrol edin.",
                 "CHECK": "İrtibat kişilerini kontrol edin"
             },
-            "TAIGA": {
-                "SELECTOR": "Taiga projenizi içe aktarın"
+            "ThreeFold Circles": {
+                "SELECTOR": "ThreeFold Circles projenizi içe aktarın"
             },
             "TRELLO": {
-                "SELECTOR": "Trello panolarınızı Taiga'ya aktarın",
+                "SELECTOR": "Trello panolarınızı ThreeFold Circles'ya aktarın",
                 "CHOOSE_PROJECT": "İçe aktarmak istediğiniz panoyu seçin",
                 "NO_PROJECTS": "Trello içinde panonuz yok"
             },
@@ -1044,7 +1044,7 @@
                 "SELECTOR": "GitHub proje taleplerini içe aktar",
                 "CHOOSE_PROJECT": "İçe aktarmak istediğiniz projeyi bulun",
                 "NO_PROJECTS": "GitHub'da projeniz yok",
-                "HOW_DO_YOU_WANT_TO_IMPORT": "Taleplerinizi Taiga'ya nasıl aktarmak istersiniz?",
+                "HOW_DO_YOU_WANT_TO_IMPORT": "Taleplerinizi ThreeFold Circles'ya nasıl aktarmak istersiniz?",
                 "KANBAN_PROJECT": "Kanban projesine kullanıcı hikayesi olarak",
                 "KANBAN_PROJECT_DESCRIPTION": "Bundan sonra scrum havuzunu açabileceksiniz.",
                 "SCRUM_PROJECT": "Scrum projesinde kullanıcı hikayesi olarak",
@@ -1058,8 +1058,8 @@
                 "NO_PROJECTS": "Asana da projeniz yok",
                 "KANBAN_PROJECT": "Kanban",
                 "SCRUM_PROJECT": "Scrum",
-                "CREATE_AS_SCRUM_DESCRIPTION": "Projenizin görev ve alt görevleri, Taiga kullanıcı hikayeleri ve görevleri olarak oluşturulacak.",
-                "CREATE_AS_KANBAN_DESCRIPTION": "Projenizin görev ve alt görevleri, Taiga kullanıcı hikayeleri ve görevleri olarak oluşturulacak."
+                "CREATE_AS_SCRUM_DESCRIPTION": "Projenizin görev ve alt görevleri, ThreeFold Circles kullanıcı hikayeleri ve görevleri olarak oluşturulacak.",
+                "CREATE_AS_KANBAN_DESCRIPTION": "Projenizin görev ve alt görevleri, ThreeFold Circles kullanıcı hikayeleri ve görevleri olarak oluşturulacak."
             },
             "JIRA": {
                 "SELECTOR": "Jira projenizi içe aktarın ve nasıl yöneteceğiniz seçin",
@@ -1070,17 +1070,17 @@
                 "KANBAN_PROJECT": "Kanban",
                 "SCRUM_PROJECT": "Scrum",
                 "ISSUES_PROJECT": "Sorunlar",
-                "CREATE_AS_SCRUM_DESCRIPTION": "Projenizin talep ve alt talepleri, Taiga kullanıcı hikayeleri ve görevleri olarak yaratılacak.",
-                "CREATE_AS_KANBAN_DESCRIPTION": "Projenizin talep ve alt talepleri, Taiga kullanıcı hikayeleri ve görevleri olarak yaratılacak.",
-                "CREATE_AS_ISSUES_DESCRIPTION": "Jira projenizin alt taleplerini ne yapmak istersiniz? (Taiga alt taleplere izin vermez)",
-                "CREATE_NEW_ISSUES": "Alt talepleri yeni Taiga taleplerine çevir.",
+                "CREATE_AS_SCRUM_DESCRIPTION": "Projenizin talep ve alt talepleri, ThreeFold Circles kullanıcı hikayeleri ve görevleri olarak yaratılacak.",
+                "CREATE_AS_KANBAN_DESCRIPTION": "Projenizin talep ve alt talepleri, ThreeFold Circles kullanıcı hikayeleri ve görevleri olarak yaratılacak.",
+                "CREATE_AS_ISSUES_DESCRIPTION": "Jira projenizin alt taleplerini ne yapmak istersiniz? (ThreeFold Circles alt taleplere izin vermez)",
+                "CREATE_NEW_ISSUES": "Alt talepleri yeni ThreeFold Circles taleplerine çevir.",
                 "NOT_CREATE_NEW_ISSUES": "Alt talepleri aktarma"
             }
         }
     },
     "LIGHTBOX": {
         "DELETE_ACCOUNT": {
-            "CONFIRM": "Taiga hesabınızı silmek istediğinizden emin misiniz?",
+            "CONFIRM": "ThreeFold Circles hesabınızı silmek istediğinizden emin misiniz?",
             "CANCEL": "Ayarlara dön",
             "ACCEPT": "Hesabı sil",
             "BLOCK_PROJECT": "Hesabınızı sildiğinizde sahibi olduğunuz tüm projeler <strong>bloke</strong> edilecek. Eğer bunu istemiyorsanız hesabınızı silmeden önce projelerinizin sahipliğini diğer üyelere devredin."
@@ -1108,11 +1108,11 @@
             "INVITE": "Davet et",
             "CHOOSE_ROLE": "Rol seçiniz",
             "PLACEHOLDER_INVITATION_TEXT": "(Opsiyonel) Davetinize kişiselleştirilmiş bir metin ekleyin. Yeni üyelerinize tatlı bir şeyler söyleyin ;-)",
-            "HELP_TEXT": "Eğer kullanıcılar önceden Taigaya kayıt olmuşlarsa, otomatik olarak ekleneceklerdir. Eğer olmamışlarsa bir davet mektubu alacaklardır."
+            "HELP_TEXT": "Eğer kullanıcılar önceden ThreeFold Circlesya kayıt olmuşlarsa, otomatik olarak ekleneceklerdir. Eğer olmamışlarsa bir davet mektubu alacaklardır."
         },
         "FEEDBACK": {
             "TITLE": "Bize birşeyler anlat..",
-            "COMMENT": "...bir hata, biraz öneri, biraz klas... ya da Taiga ile en kötü kabusunuz",
+            "COMMENT": "...bir hata, biraz öneri, biraz klas... ya da ThreeFold Circles ile en kötü kabusunuz",
             "ACTION_SEND": "Geribildirim Gönder"
         },
         "SEARCH": {
@@ -1252,15 +1252,15 @@
         "RELATE_TO_EPIC": "Link to Epic",
         "REMOVE_RELATIONSHIP_WITH_EPIC": "Remove Epic relationship",
         "TRIBE": {
-            "PUBLISH": "Taiga Tribe'da Gig olarak yayınla",
+            "PUBLISH": "ThreeFold Circles Tribe'da Gig olarak yayınla",
             "PUBLISH_INFO": "Daha fazla bilgi",
-            "PUBLISH_TITLE": "More info on publishing in Taiga Tribe",
-            "PUBLISHED_AS_GIG": "Story published as Gig in Taiga Tribe",
+            "PUBLISH_TITLE": "More info on publishing in ThreeFold Circles Tribe",
+            "PUBLISHED_AS_GIG": "Story published as Gig in ThreeFold Circles Tribe",
             "EDIT_LINK": "Edit link",
             "CLOSE": "Kapat",
-            "SYNCHRONIZE_LINK": "synchronize with Taiga Tribe",
+            "SYNCHRONIZE_LINK": "synchronize with ThreeFold Circles Tribe",
             "PUBLISH_MORE_INFO_TITLE": "Do you need somebody for this task?",
-            "PUBLISH_MORE_INFO_TEXT": "<p>If you need help with a particular piece of work you can easily create gigs on<a href='http://taigatribe.com' title='Taiga Tribe'> Taiga Tribe </a> and receive help from all over the world. You will be able to control and manage the gig enjoying a great community eager to contribute.</p><p><a href='http://taigatribe.com' title='Taiga Tribe'> TaigaTribe </a>  was born as a Taiga sibling. Both platforms can live separately but we believe that there is much power in using them combined so we are making sure the integration works like a charm.</p>"
+            "PUBLISH_MORE_INFO_TEXT": "<p>If you need help with a particular piece of work you can easily create gigs on<a href='http://ThreeFold Circlestribe.com' title='ThreeFold Circles Tribe'> ThreeFold Circles Tribe </a> and receive help from all over the world. You will be able to control and manage the gig enjoying a great community eager to contribute.</p><p><a href='http://ThreeFold Circlestribe.com' title='ThreeFold Circles Tribe'> ThreeFold CirclesTribe </a>  was born as a ThreeFold Circles sibling. Both platforms can live separately but we believe that there is much power in using them combined so we are making sure the integration works like a charm.</p>"
         }
     },
     "COMMENTS": {
@@ -1398,10 +1398,10 @@
     "ERROR": {
         "TEXT1": "Birşeyler oldu ve bizim Honki ponkilerimiz üzerinde çalışıyor.",
         "NOT_FOUND": "Bulunamadı",
-        "NOT_FOUND_TEXT": "Hata 404. Baktığınız sayfa mevcut değil. Belki TAIGA ana sayfasına geri dönerek aradığınızı bulabilirsiniz.",
+        "NOT_FOUND_TEXT": "Hata 404. Baktığınız sayfa mevcut değil. Belki ThreeFold Circles ana sayfasına geri dönerek aradığınızı bulabilirsiniz.",
         "PERMISSION_DENIED": "İzin verilmedi",
         "PERMISSION_DENIED_TEXT": "Bu sayfaya erişim izniniz yok.",
-        "VERSION_ERROR": "Honki ponkilerimiz yaptığınız değişiklikleri uygulamadan önce Taiga da çalışan birileri farklı bir değişiklik yapmış. Lütfen sayfayı yeniden yükleyin ve değişikliklerinizi yeniden uygulayın(yenileme ile değişiklikler kaybolabilir)."
+        "VERSION_ERROR": "Honki ponkilerimiz yaptığınız değişiklikleri uygulamadan önce ThreeFold Circles da çalışan birileri farklı bir değişiklik yapmış. Lütfen sayfayı yeniden yükleyin ve değişikliklerinizi yeniden uygulayın(yenileme ile değişiklikler kaybolabilir)."
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Koşu İş Panosu - {{projectName}}",
@@ -1475,7 +1475,7 @@
     },
     "CANCEL_ACCOUNT": {
         "TITLE": "Hesabınızı iptal edin",
-        "SUBTITLE": "Taigadan ayrıldığınız için üzüldük, umarım kaldığınız sürece sizi memnun kılmışızdır :)",
+        "SUBTITLE": "ThreeFold Circlesdan ayrıldığınız için üzüldük, umarım kaldığınız sürece sizi memnun kılmışızdır :)",
         "PLACEHOLDER_INPUT_TOKEN": "hesap kuponunu iptal et",
         "ACTION_LEAVING": "Evet, ayrılıyorum!",
         "SUCCESS": "Honki ponkilerimiz hesabınızı sildi"
@@ -1618,7 +1618,7 @@
         },
         "EVENTS": {
             "SECTION_NAME": "Events",
-            "SECTION_DESCRIPTION": "Important events in Taiga header",
+            "SECTION_DESCRIPTION": "Important events in ThreeFold Circles header",
             "SECTION_DESCRIPTION_EXPANDED": "(direct mentions, updates in items that you are watching...)",
             "COLUMN_ENABLED": "Enabled",
             "COLUMN_PROJECT": "Proje"
@@ -1626,8 +1626,8 @@
     },
     "USER_PROFILE": {
         "ACTION_USE_GRAVATAR": "Varsayılan resmi kullan",
-        "ACTION_DELETE_ACCOUNT": "Taiga hesabını sil",
-        "ACTION_DOWNLOAD_PROFILE": "Download Taiga profile",
+        "ACTION_DELETE_ACCOUNT": "ThreeFold Circles hesabını sil",
+        "ACTION_DOWNLOAD_PROFILE": "Download ThreeFold Circles profile",
         "CHANGE_EMAIL_SUCCESS": "<strong>Gelen kutunuzu kontrol edin!</strong><br />Yeni adresinizi belirlemek için gerekli<br />  yönergeleri içeren postayı gönderdik",
         "CHANGE_PHOTO": "Resim değiştir",
         "FIELD": {
@@ -1676,7 +1676,7 @@
         "LINK": "Nasıl kullanılacağını öğrenmek isterseniz destek sayfamıza bekleriz",
         "LINK_TITLE": "Destek sayfamızı ziyaret edin",
         "HINT1_TITLE": "Projeleri içe ya da dışarı aktarabileceğinizi biliyor muydunuz?",
-        "HINT1_TEXT": "Bu bir Taiga da yer alan tüm verilerinizi çıkararak diğerine taşımanıza olanak sağlar.",
+        "HINT1_TEXT": "Bu bir ThreeFold Circles da yer alan tüm verilerinizi çıkararak diğerine taşımanıza olanak sağlar.",
         "HINT2_TITLE": "Özel alanlar oluşturabileceğinizi biliyor muydunuz?",
         "HINT2_TEXT": "Takımlar artık kendi iş akışlarına özgü bilgileri girebilecekleri özel alanlar oluşturabilirler",
         "HINT3_TITLE": "Projelerinizi, sizi en çok ilgilendirenleri öne çıkartacak şekilde sıralayın.",
@@ -1719,7 +1719,7 @@
         "US_REMOVED_FROM_MILESTONE": "{{username}} havuza {{obj_name}} hikayesini ekledi",
         "BLOCKED": "{{obj_name}}, {{username}}  tarafından engellendi",
         "UNBLOCKED": "{{obj_name}} nin engeli {{username}} tarafından kaldırıldı ",
-        "NEW_USER": "{{username}}  Taiga ya katıldı",
+        "NEW_USER": "{{username}}  ThreeFold Circles ya katıldı",
         "ITEM_TYPES": {
             "USERSTORY": "User Story",
             "ISSUE": "Sorun",
@@ -1749,7 +1749,7 @@
     "EXTERNAL_APP": {
         "PAGE_TITLE": "Bir dış uygulama oturum açmayı gerektiriyor",
         "PAGE_DESCRIPTION": "Bir dış uygulama oturum açmayı gerektiriyor",
-        "AUTHORIZATION_REQUEST": "Taiga hesabınızı kullanması için {{application}} uygulamasına izin verin?",
+        "AUTHORIZATION_REQUEST": "ThreeFold Circles hesabınızı kullanması için {{application}} uygulamasına izin verin?",
         "LOGIN_WITH_ANOTHER_USER": "Başka kullanıcı ile oturum açın",
         "AUTHORIZE_APP": "Uygulamayı yetkilendir",
         "CANCEL": "İptal"
@@ -1773,11 +1773,11 @@
             "STEP3": {
                 "TITLE": "İzliyor",
                 "TEXT1": "Ve burada da projenizde bilmek isteyebileceklerinizi bulacaksınız.",
-                "TEXT2": "Zaten Taiga ile birlikte çalışmaktasınız ;)"
+                "TEXT2": "Zaten ThreeFold Circles ile birlikte çalışmaktasınız ;)"
             },
             "STEP4": {
                 "TITLE": "Hadi başlayın",
-                "TEXT1": "İlk Taiga projenizi oluşturarak başlayabilirsiniz.",
+                "TEXT1": "İlk ThreeFold Circles projenizi oluşturarak başlayabilirsiniz.",
                 "TEXT2": "İyi şanslar!"
             }
         },
@@ -1817,8 +1817,8 @@
         }
     },
     "DISCOVER": {
-        "PAGE_TITLE": "Projeleri keşfedin - Taiga",
-        "PAGE_DESCRIPTION": "Searchable directory of Public Projects in Taiga. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
+        "PAGE_TITLE": "Projeleri keşfedin - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Searchable directory of Public Projects in ThreeFold Circles. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
         "DISCOVER_TITLE": "Proje keşfedin",
         "DISCOVER_SUBTITLE": "{projects, plural, one{Keşfedilecek bir açık proje} other{Keşfedilecek # açık proje}}",
         "MOST_ACTIVE": "En hareketli",
@@ -1840,8 +1840,8 @@
             "CLEAR": "Filtreleri kaldır"
         },
         "SEARCH": {
-            "PAGE_TITLE": "Arama - Proje keşfedin - Taiga",
-            "PAGE_DESCRIPTION": "Searchable directory of Public Projects in Taiga. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
+            "PAGE_TITLE": "Arama - Proje keşfedin - ThreeFold Circles",
+            "PAGE_DESCRIPTION": "Searchable directory of Public Projects in ThreeFold Circles. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
             "INPUT_PLACEHOLDER": "Birşeyler yazın...",
             "ACTION_TITLE": "Ara",
             "RESULTS": "Arama sonuçları"

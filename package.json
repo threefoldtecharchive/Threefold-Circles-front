@@ -1,10 +1,10 @@
 {
-  "name": "TaigaIO",
+  "name": "ThreeFold Circles",
   "version": "4.2.12",
-  "description": "Taiga project management system (frontend)",
+  "description": "ThreeFold Circles project management system (frontend)",
   "main": "index.js",
   "keywords": [
-    "Taiga",
+    "ThreeFold Circles",
     "Agile",
     "Project Management",
     "Github"
