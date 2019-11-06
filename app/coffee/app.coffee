@@ -38,7 +38,7 @@ taiga.sessionId = taiga.generateUniqueSessionIdentifier()
 
 
 configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEventsProvider,
-             $compileProvider, $translateProvider, $translatePartialLoaderProvider, $animateProvider) ->
+             $compileProvider, $translateProvider, $translatePartialLoaderProvider, $animateProvider, $auth) ->
 
     $animateProvider.classNameFilter(/^(?:(?!ng-animate-disabled).)*$/)
 
@@ -512,15 +512,35 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
     )
 
     # Auth
-    $routeProvider.when("/login",
+    # $routeProvider.when("/login",
+    #     {
+    #         templateUrl: "auth/login.html",
+    #         title: "LOGIN.PAGE_TITLE",
+    #         description: "LOGIN.PAGE_DESCRIPTION",
+    #         disableHeader: true,
+    #         controller: "LoginPage",
+    #     }
+    # )
+
+    $routeProvider.when("/threebot",
         {
-            templateUrl: "auth/login.html",
-            title: "LOGIN.PAGE_TITLE",
-            description: "LOGIN.PAGE_DESCRIPTION",
             disableHeader: true,
             controller: "LoginPage",
-        }
-    )
+            resolve:
+                init: ($route) ->
+                    console.log($route.current.params)
+                    $.ajax('http://localhost:8000/api/v1/threebot/callback', {
+                        type: 'GET',
+                        data: {
+                            username: $route.current.params.username,
+                            signedhash: $route.current.params.signedhash,
+                            data: $route.current.params.data
+                        },
+                        success: (res, status, xhr) -> console.log(res),
+                        error: (xhr, status, err) -> console.log(err),
+                        complete: (xhr, status) -> 
+                    });
+        })
     $routeProvider.when("/register",
         {
             templateUrl: "auth/register.html",

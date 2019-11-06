@@ -1,7 +1,6 @@
 //*************************
 //** LAYOUT
 //*************************
-
 // Default body color and background
 body {
     background: $white; // fallback
@@ -28,8 +27,6 @@ body {
     background: $mass-white;
 }
 
-
-
 // Titles
 h1,
 h2,
@@ -47,10 +44,17 @@ a {
     }
 }
 
+.navbar {
+    .topnav-dropdown-wrapper a {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
 //**************************
 //** SCAFFOLDING
 //**************************
-
 //Forms
 input[type="text"],
 input[type="number"],
@@ -71,7 +75,6 @@ textarea {
         border: 1px solid $red;
     }
 }
-
 
 // Input errors
 .checksley-error-list {
@@ -94,29 +97,23 @@ cite {
     color: $gray;
 }
 
-
 .summary {
     background: $grayer;
     color: $white;
 }
 
-
 //************************
 //** NAVIGATION
 //***********************
-
 // Top navigation bar
 .navbar {
-    background: rgba($black, .5);
-    &::after {
-        background: url('../images/menu-vert.png') repeat top left;
-    }
+    background: #0973b8;
 }
 
 //In project left navigation bar
 tg-project-menu {
-    background-color: $primary-dark;
-    background-image: url('../images/menu.png');
+    background-color: #a4a4a1;
+    background-image: none;
 }
 
 .main-nav {
@@ -128,7 +125,6 @@ tg-project-menu {
 //*****************************
 //** TASKBOARD
 //******************************
-
 //Taskboard table
 .taskboard-table-header {
     .task-colum-name {
@@ -139,6 +135,7 @@ tg-project-menu {
         }
     }
 }
+
 .taskboard-table-body {
     .taskboard-cards-box {
         background: $mass-white;
@@ -148,7 +145,6 @@ tg-project-menu {
 //*****************************
 //** KANBAN
 //******************************
-
 //Kanban table
 .kanban-table-header {
     .task-colum-name {

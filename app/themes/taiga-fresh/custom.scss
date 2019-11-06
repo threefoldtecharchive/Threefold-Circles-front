@@ -1,6 +1,5 @@
-
 .navbar .nav-right a.active svg,
-.navbar .nav-right a svg{
+.navbar .nav-right a svg {
     fill: $primary-50;
     stroke: $primary-50;
 }
@@ -10,9 +9,14 @@
     stroke: $primary-25;
 }
 
+.navbar .topnav-dropdown-wrapper>a:hover {
+    color: #fff !important;
+}
+
 .navbar {
     background-color: $primary;
 }
+
 .main-nav li .icon,
 .main-nav li:hover .icon {
     fill: $white;
@@ -28,10 +32,13 @@
     stroke: $grey-50;
 }
 
+.button-green:hover {
+    background: rgba(9, 115, 184, .8);
+}
+
 //***********************
 //** FONT-TYPE
 //***********************
-
 h1 .title,
 .taskboard-header .project-name-short,
 .project-name,
@@ -46,7 +53,7 @@ h1 span,
 .intro-title .project-name,
 .taskboard-header h1 .date,
 .project-privacy-settings .privacy-project label,
-.create-project-privacity input:checked + label {
+.create-project-privacity input:checked+label {
     @include font-type(text);
 }
 
@@ -54,22 +61,22 @@ h1 span,
     @include font-type(bold);
 }
 
-
 //***********************
 //** FONT-SIZE
 //***********************
-
 h1,
 h1 span,
 .create-project-title-wrapper h1,
 .project-list-wrapper .project-list-title h1 {
     @include font-size(larger)
 }
+
 .button-bulk,
 .button-green,
 a.button-green {
     @include font-size(large)
 }
+
 .admin-membership-table .active,
 .admin-membership-table .resend,
 .action-buttons .button-green,
@@ -79,30 +86,31 @@ a.button-green {
     @include font-size(small)
 }
 
-
-
 //***********************
 //** FILL-STROKE
 //***********************
-
 .wiki-nav .add-button svg,
 .create-project-privacity .icon {
     fill: $white;
     stroke: $white;
 }
+
 .card-unfold svg {
     fill: $grey-20;
     stroke: $grey-20;
 }
+
 .card-statistics .icon,
 .taskboard-table-header .task-colum-name .icon {
     fill: $grey-30;
     stroke: $grey-30;
 }
+
 .summary .stats svg {
     fill: $grey-40;
     stroke: $grey-40;
 }
+
 .admin-functionalities .module.active .module-icon .icon,
 .list-itemtype-project .icon,
 .profile-content-tabs .tab.active .icon {
@@ -116,6 +124,7 @@ a.button-green {
     fill: $primary;
     stroke: $primary;
 }
+
 .large-summary a:hover .icon {
     fill: $primary-50;
     stroke: $primary-50;
@@ -126,21 +135,17 @@ a.button-green {
     stroke: $red;
 }
 
-
-
-
 //***********************
 //** COLOR
 //***********************
-
-
-.check input  + div,
-.check input:checked + div,
+.check input+div,
+.check input:checked+div,
 .track-button.is-hover .track-button-counter,
 .track-button.is-hover .track-button-counter,
-.create-project-privacity input + label {
+.create-project-privacity input+label {
     color: $white;
 }
+
 .card-statistics,
 .related-tasks-body .closed,
 .related-tasks-body .closed:hover,
@@ -148,6 +153,7 @@ a.button-green {
 .related-tasks-body .closed:hover .task-name a {
     color: $grey-30;
 }
+
 .project-name {
     color: $grey-40;
 }
@@ -156,6 +162,7 @@ a.button-green {
 .notifications-list .entry .entry-project {
     color: $grey-50;
 }
+
 .card-task a,
 .admin-functionalities .module.active .module-name,
 .menu-secondary .admin-menu ul a span,
@@ -164,9 +171,11 @@ a.button-green {
 .taskboard-header h1 .date {
     color: $grey-70;
 }
+
 a {
     color: $grey-80;
 }
+
 h1,
 h2,
 h3,
@@ -183,6 +192,7 @@ h6,
 .highlighted-project .project-title a {
     color: $grey-90;
 }
+
 .notifications-page .title,
 .project-list-title h1,
 .create-project-title-wrapper h1,
@@ -192,19 +202,19 @@ h6,
 a:hover {
     color: $primary;
 }
+
 .summary .data .number {
     color: $primary-50;
 }
 
-
 //***********************
 //** BACKGROUND-COLOR
 //***********************
-
 .menu-secondary .admin-menu ul a:hover,
 .single-project .involved-team .icon-badge {
     background-color: $white;
 }
+
 .extrabar,
 .issues-options,
 .menu-secondary,
@@ -214,6 +224,7 @@ a:hover {
 .admin-common .total {
     background-color: $grey-02;
 }
+
 .tag,
 .contact-team,
 .contact-team:hover,
@@ -224,6 +235,7 @@ a:hover {
 .trans-button.create-project-action-cancel {
     background-color: $grey-05;
 }
+
 .check input,
 .menu-tertiary .admin-submenu ul a.active,
 .menu-tertiary .admin-submenu ul a:hover,
@@ -232,30 +244,33 @@ a:hover {
 .button-filter {
     background-color: $grey-10;
 }
-.check input + label,
-.lightbox-create-related-user-stories .related-with-selector input + label,
+
+.check input+label,
+.lightbox-create-related-user-stories .related-with-selector input+label,
 .menu-tertiary,
-.policy-table input + label,
-.project-privacy-settings .privacy-project + label,
+.policy-table input+label,
+.project-privacy-settings .privacy-project+label,
 .create-project-privacity label {
     background-color: $grey-20;
 }
+
 tg-project-menu {
     background-color: $grey-30;
 }
-.check input  + div,
-.check input:checked + label,
-.lightbox-create-related-user-stories .related-with-selector input:checked + label,
-.policy-table input:checked + label ,
-.project-privacy-settings .privacy-project:checked + label,
-.project-privacy-settings .privacy-project:checked + label:hover,
-.create-project-privacity input:checked + label,
+
+.check input+div,
+.check input:checked+label,
+.lightbox-create-related-user-stories .related-with-selector input:checked+label,
+.policy-table input:checked+label,
+.project-privacy-settings .privacy-project:checked+label,
+.project-privacy-settings .privacy-project:checked+label:hover,
+.create-project-privacity input:checked+label,
 .category-config .summary-role .role-summary-single.active {
     background-color: $grey-70;
 }
 
 .wiki-nav .add-button svg,
-.check input:checked + div {
+.check input:checked+div {
     background-color: $primary;
 }
 
@@ -266,14 +281,15 @@ tg-project-menu {
     background-color: $secondary;
 }
 
-.check input + label:hover,
-.lightbox-create-related-user-stories .related-with-selector input + label:hover,
-.policy-table input + label:hover,
+.check input+label:hover,
+.lightbox-create-related-user-stories .related-with-selector input+label:hover,
+.policy-table input+label:hover,
 .track-button.active .track-button-counter,
-.project-privacy-settings .privacy-project:not(:checked) + label.trans-button:hover,
+.project-privacy-settings .privacy-project:not(:checked)+label.trans-button:hover,
 .create-project-privacity label:hover {
     background-color: lighten($grey-20, 5%);
 }
+
 .epic-row:hover,
 .backlog-table-body .row:hover,
 .lb-select-user-form .user-list-item.is-active,
@@ -284,19 +300,18 @@ tg-project-menu {
 .topnav-dropdown-wrapper .counter {
     background: $secondary;
 }
+
 .track-button.is-hover .track-button-counter {
     background-color: $red;
 }
+
 .track-button.is-hover .track-inner {
     background-color: $red-25;
 }
 
-
-
 //************************
 //** BUTTONS
 //***********************
-
 @mixin btn() {
     @include font-type(text);
     @include font-size(small);
@@ -317,6 +332,7 @@ tg-project-menu {
         color: $grey-30;
     }
 }
+
 @mixin btn-secondary() {
     @include btn();
     background: $secondary;
@@ -325,10 +341,12 @@ tg-project-menu {
         background: lighten($secondary, 5%);
     }
 }
+
 @mixin btn-secondary-small() {
     @include btn-secondary();
     padding: 0 .75rem;
 }
+
 @mixin btn-secondary-large() {
     @include btn-secondary();
     @include font-size(large);
@@ -336,6 +354,7 @@ tg-project-menu {
     max-height: 50px;
     width: 100%;
 }
+
 @mixin btn-grey() {
     @include btn();
     background: $grey-50;
@@ -344,11 +363,13 @@ tg-project-menu {
         background: lighten($grey-50, 5%);
     }
 }
+
 @mixin btn-grey-block() {
     @include btn-grey();
     white-space: nowrap;
     width: 100%;
 }
+
 @mixin btn-grey-light() {
     @include btn();
     background: $grey-20;
@@ -357,11 +378,13 @@ tg-project-menu {
         background: lighten($grey-20, 5%);
     }
 }
+
 @mixin btn-grey-light-block() {
     @include btn-grey-light();
     white-space: nowrap;
     width: 100%;
 }
+
 @mixin btn-primary() {
     @include btn();
     background: $primary;
@@ -370,10 +393,12 @@ tg-project-menu {
         background: lighten($primary, 5%);
     }
 }
+
 @mixin btn-primary-small() {
     @include btn-primary();
     padding: 0 .5rem;
 }
+
 @mixin btn-red() {
     @include btn();
     background: $red;
@@ -382,6 +407,7 @@ tg-project-menu {
         background: lighten($red, 5%);
     }
 }
+
 @mixin btn-red-light() {
     @include btn();
     background: $red-light;
@@ -396,6 +422,7 @@ tg-project-menu {
 .related-tasks-header .add-button {
     @include btn-primary-small();
 }
+
 .button-green,
 a.button-green,
 .lightbox-ask-choice .options a.button-green,
@@ -404,6 +431,7 @@ a.button-green,
 .create-project-btn.button-green {
     @include btn-secondary();
 }
+
 .lightbox .button-green,
 .submit-button,
 .ticket-detail-settings .lightbox-assign-sprint-to-issue button,
@@ -412,6 +440,7 @@ a.button-green,
 .user-change-password .button-green {
     @include btn-secondary-large();
 }
+
 .button-bulk {
     @include btn-secondary-small();
 }
@@ -421,6 +450,7 @@ a.button-green,
 .action-buttons .button-gray {
     @include btn-grey();
 }
+
 .project-details label.trans-button {
     @include btn-grey-light-block();
 }
@@ -440,13 +470,14 @@ a.button-green,
     &:hover {
         background: lighten($grey-40, 5%);
     }
-    &[disabled]{
+    &[disabled] {
         background: $grey-20;
     }
-    &.active{
+    &.active {
         background: $grey-70;
     }
 }
+
 .ticket-detail-settings .assign-issue-button.button-set,
 .ticket-detail-settings .item-unblock,
 .ticket-detail-settings .button-set {
@@ -455,16 +486,19 @@ a.button-green,
         background: lighten($grey-70, 10%);
     }
 }
+
 .save-filters.button-gray,
 .see-more-projects-btn.button-gray,
 .sprints .button-gray,
 .project-details-image .change-image {
     @include btn-grey-block();
 }
+
 .lightbox-ask-choice .options a.button-red,
 .lightbox-generic-ask .options a.button-red {
     @include btn-red();
 }
+
 .button-red.delete-role {
     @include btn-red-light();
 }
@@ -472,7 +506,6 @@ a.button-green,
 //***********************
 //** FORMS
 //***********************
-
 input[type="text"],
 input[type="number"],
 input[type="password"],
@@ -486,29 +519,27 @@ textarea {
     border-color: $gray-light;
     color: $grayer;
     @include placeholder {
-        color: lighten($gray-light,
-        10%);
+        color: lighten($gray-light, 10%);
     }
     &.checksley-error {
         border: 1px solid $red;
     }
 }
 
-
-
 //***********************
 //** OTHER
 //***********************
-
 .discover-header .title {
     line-height: 3rem;
 }
+
 .create-project-privacity label {
     padding: 0 .75rem;
     min-height: 37px;
 }
-.check input ~ .check-no,
-.check input:checked ~ .check-yes {
+
+.check input~.check-no,
+.check input:checked~.check-yes {
     opacity: 1;
 }
 

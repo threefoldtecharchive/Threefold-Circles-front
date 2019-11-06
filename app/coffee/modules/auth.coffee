@@ -160,15 +160,32 @@ class AuthService extends taiga.Service
             @rootscope.$broadcast("auth:refresh", user)
             return user
 
-    login: (data, type) ->
+    login: (data) ->
         url = @urls.resolve("auth")
-
+        console.log(url)
         data = _.clone(data, false)
         data.type = if type then type else "normal"
 
         @.removeToken()
 
         return @http.post(url, data).then (data, status) =>
+            console.log()
+            user = @model.make_model("users", data.data)
+            @.setToken(user.auth_token)
+            @.setUser(user)
+            @rootscope.$broadcast("auth:login", user)
+            return user
+
+    threebot: (data) ->
+        url = @urls.resolve("threebot_callback")
+        console.log(data)
+        data = _.clone(data, false)
+        # data.type = if type then type else "normal"
+
+        # @.removeToken()
+
+        return @http.post(url, data).then (data, status) =>
+            console.log()
             user = @model.make_model("users", data.data)
             @.setToken(user.auth_token)
             @.setUser(user)
