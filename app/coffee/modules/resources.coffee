@@ -26,7 +26,6 @@ urls = {
     "auth": "/auth"
     "auth-register": "/auth/register"
     "invitations": "/invitations"
-    "threebot_callback": "/threebot/callback"
     # User
     "users": "/users"
     "by_username": "/users/by_username"

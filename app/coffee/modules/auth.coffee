@@ -162,35 +162,25 @@ class AuthService extends taiga.Service
 
     login: (data) ->
         url = @urls.resolve("auth")
-        console.log(url)
         data = _.clone(data, false)
         data.type = if type then type else "normal"
 
         @.removeToken()
 
         return @http.post(url, data).then (data, status) =>
-            console.log()
             user = @model.make_model("users", data.data)
             @.setToken(user.auth_token)
             @.setUser(user)
             @rootscope.$broadcast("auth:login", user)
             return user
 
-    threebot: (data) ->
-        url = @urls.resolve("threebot_callback")
-        console.log(data)
-        data = _.clone(data, false)
-        # data.type = if type then type else "normal"
-
-        # @.removeToken()
-
-        return @http.post(url, data).then (data, status) =>
-            console.log()
-            user = @model.make_model("users", data.data)
-            @.setToken(user.auth_token)
-            @.setUser(user)
-            @rootscope.$broadcast("auth:login", user)
-            return user
+    threebot: (data, $route) ->        
+        @.removeToken()
+        user = @model.make_model("users", data)
+        @.setToken(user.auth_token)
+        @.setUser(user)
+        $route.reload()
+        return user
 
     logout: ->
         @.removeToken()
@@ -293,8 +283,23 @@ module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeP
                                              "$tgTemplate", PublicRegisterMessageDirective])
 
 
+ThreeBotLoginDirective = ($auth, $routeParams, $route) ->
+    link = ($el, $scope) ->    
+
+        $.ajax('http://localhost:8000/api/v1/threebot/callback', {
+            type: 'GET',
+            data: $routeParams,
+            success: (res, status, xhr) -> $auth.threebot(res, $route)
+            error: (xhr, status, err) -> console.log(err)
+        });
+
+    return {link:link}
+
+module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route", ThreeBotLoginDirective])
+
 LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $events, $translate, $window, $analytics) ->
-    link = ($scope, $el, $attrs) ->
+    link = ($scope, $el, $attrs) ->    
+
         form = new checksley.Form($el.find("form.login-form"))
 
         if $routeParams['next'] and $routeParams['next'] != $navUrls.resolve("login")
