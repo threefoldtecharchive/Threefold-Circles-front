@@ -283,10 +283,10 @@ module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeP
                                              "$tgTemplate", PublicRegisterMessageDirective])
 
 
-ThreeBotLoginDirective = ($auth, $routeParams, $route) ->
+ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
     link = ($el, $scope) ->    
 
-        $.ajax('http://localhost:8000/api/v1/threebot/callback', {
+        $.ajax($config.get('api') + "threebot/callback", {
             type: 'GET',
             data: $routeParams,
             success: (res, status, xhr) -> $auth.threebot(res, $route)
@@ -295,7 +295,7 @@ ThreeBotLoginDirective = ($auth, $routeParams, $route) ->
 
     return {link:link}
 
-module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route", ThreeBotLoginDirective])
+module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig",  ThreeBotLoginDirective])
 
 LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $events, $translate, $window, $analytics) ->
     link = ($scope, $el, $attrs) ->    

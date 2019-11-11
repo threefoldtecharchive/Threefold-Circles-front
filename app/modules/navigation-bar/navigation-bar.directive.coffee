@@ -29,11 +29,10 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
         scope.vm.customSupportUrl = config.get("supportUrl")
 
         scope.vm.login = ->
-            # nextUrl = encodeURIComponent(locationService.url())
+            url = config.get('api') + "threebot/login"
             # locationService.url(navUrlsService.resolve("login"))
             # locationService.search({next: nextUrl})
-
-            $.ajax 'http://localhost:8000/api/v1/threebot/login',
+            $.ajax url,
             type: 'GET'
 
             error: (jqXHR, textStatus, errorThrown) ->
