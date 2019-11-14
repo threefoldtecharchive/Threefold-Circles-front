@@ -50,7 +50,7 @@ var version = "v-" + Date.now();
 
 var paths = {};
 paths.app = "app/";
-paths.dist = "dist/";
+paths.dist = "../Threefold-Circles-front-dist/dist/";
 paths.distVersion = paths.dist + version + "/";
 paths.tmp = "tmp/";
 paths.extras = "extras/";
@@ -202,8 +202,7 @@ paths.libs.forEach(function(file) {
     try {
         // Query the entry
         stats = fs.lstatSync(file);
-    }
-    catch (e) {
+    } catch (e) {
         console.log(file);
     }
 });
@@ -216,13 +215,13 @@ var isDeploy = argv["_"].indexOf("deploy") !== -1;
 ##############################################################################
 */
 
-var jadeIncludes = paths.app +'partials/includes/**/*';
+var jadeIncludes = paths.app + 'partials/includes/**/*';
 
 gulp.task("jade", function() {
     return gulp.src(paths.jade)
         .pipe(plumber())
         .pipe(cached("jade"))
-        .pipe(jade({pretty: true, locals:{v:version}}))
+        .pipe(jade({ pretty: true, locals: { v: version } }))
         .pipe(gulp.dest(paths.tmp));
 });
 
@@ -230,8 +229,8 @@ gulp.task("jade-inheritance", function() {
     return gulp.src(paths.jade)
         .pipe(plumber())
         .pipe(cached("jade"))
-        .pipe(jadeInheritance({basedir: "./app/"}))
-        .pipe(jade({pretty: true, locals:{v: version}}))
+        .pipe(jadeInheritance({ basedir: "./app/" }))
+        .pipe(jade({ pretty: true, locals: { v: version } }))
         .pipe(gulp.dest(paths.tmp));
 });
 
@@ -243,7 +242,7 @@ gulp.task("copy-index", function() {
 gulp.task("template-cache", function() {
     return gulp.src(paths.htmlPartials)
         .pipe(gulpif(isDeploy, replace(/e2e-([a-z\-]+)/g, '')))
-        .pipe(templateCache({standalone: true}))
+        .pipe(templateCache({ standalone: true }))
         .pipe(gulpif(isDeploy, uglify()))
         .pipe(gulp.dest(paths.distVersion + "js/"))
         .pipe(gulpif(!isDeploy, livereload()));
@@ -275,19 +274,19 @@ gulp.task("scss-lint", [], function() {
     var tmpDir = 'gulp-cache-' + os.userInfo().username;
 
     return gulp.src(sassFiles)
-        .pipe(gulpif(!isDeploy, cache(scsslint({endless: true, sync: true, config: ".scss-lint.yml"}), {
-          success: function(scsslintFile) {
-            return scsslintFile.scsslint.success;
-          },
-          value: function(scsslintFile) {
-            return {
-              scsslint: scsslintFile.scsslint
-            };
-          },
-          fileCache: new cache.Cache({
-            tmpdir: os.tmpdir(),
-            cacheDirName: tmpDir
-          })
+        .pipe(gulpif(!isDeploy, cache(scsslint({ endless: true, sync: true, config: ".scss-lint.yml" }), {
+            success: function(scsslintFile) {
+                return scsslintFile.scsslint.success;
+            },
+            value: function(scsslintFile) {
+                return {
+                    scsslint: scsslintFile.scsslint
+                };
+            },
+            fileCache: new cache.Cache({
+                tmpdir: os.tmpdir(),
+                cacheDirName: tmpDir
+            })
         })))
         .pipe(gulpif(fail, scsslint.failReporter()));
 });
@@ -316,25 +315,25 @@ gulp.task("css-lint-app", function() {
 
     return gulp.src(cssFiles)
         .pipe(gulpif(!isDeploy, cache(csslint("csslintrc.json"), {
-          success: function(csslintFile) {
-              if (csslintFile.csslint) {
-                  return csslintFile.csslint.success;
-              } else {
-                  return false;
-              }
-          },
-          value: function(csslintFile) {
-            return {
-              csslint: csslintFile.csslint
-            };
-          }
+            success: function(csslintFile) {
+                if (csslintFile.csslint) {
+                    return csslintFile.csslint.success;
+                } else {
+                    return false;
+                }
+            },
+            value: function(csslintFile) {
+                return {
+                    csslint: csslintFile.csslint
+                };
+            }
         })))
         .pipe(csslint.reporter());
 });
 
 gulp.task("app-css", function() {
     return gulp.src(paths.css)
-        .pipe(order(paths.css_order, {base: '.'}))
+        .pipe(order(paths.css_order, { base: '.' }))
         .pipe(concat("theme-" + themes.current.name + ".css"))
         .pipe(autoprefixer({
             cascade: false
@@ -361,27 +360,26 @@ gulp.task("main-css", function() {
 
     return gulp.src(_paths)
         .pipe(concat("theme-" + themes.current.name + ".css"))
-        .pipe(gulpif(isDeploy, minifyCSS({noAdvanced: true})))
+        .pipe(gulpif(isDeploy, minifyCSS({ noAdvanced: true })))
         .pipe(gulp.dest(paths.distVersion + "styles/"))
         .pipe(livereload());
 });
 
-var compileThemes = function (cb) {
+var compileThemes = function(cb) {
     return runSequence("clear",
-                       "scss-lint",
-                       "sass-compile",
-                       "css-lint-app",
-                       ["app-css", "vendor-css"],
-                       "main-css",
-                       function() {
-                           themes.next();
+        "scss-lint",
+        "sass-compile",
+        "css-lint-app", ["app-css", "vendor-css"],
+        "main-css",
+        function() {
+            themes.next();
 
-                           if (themes.current) {
-                               compileThemes(cb);
-                           } else {
-                               cb();
-                           }
-                       });
+            if (themes.current) {
+                compileThemes(cb);
+            } else {
+                cb();
+            }
+        });
 };
 
 gulp.task("compile-themes", function(cb) {
@@ -390,27 +388,24 @@ gulp.task("compile-themes", function(cb) {
 
 gulp.task("styles", function(cb) {
     return runSequence("scss-lint",
-                       "sass-compile",
-                       ["app-css", "vendor-css"],
-                       "main-css",
-                       cb);
+        "sass-compile", ["app-css", "vendor-css"],
+        "main-css",
+        cb);
 });
 
 gulp.task("styles-lint", function(cb) {
     return runSequence("scss-lint",
-                       "sass-compile",
-                       "css-lint-app",
-                       ["app-css", "vendor-css"],
-                       "main-css",
-                       cb);
+        "sass-compile",
+        "css-lint-app", ["app-css", "vendor-css"],
+        "main-css",
+        cb);
 });
 
 gulp.task("styles-dependencies", function(cb) {
     return runSequence("clear-sass-cache",
-                       "sass-compile",
-                       ["app-css", "vendor-css"],
-                       "main-css",
-                       cb);
+        "sass-compile", ["app-css", "vendor-css"],
+        "main-css",
+        cb);
 });
 
 /*
@@ -456,7 +451,7 @@ gulp.task("emoji", function(cb) {
     });
 
     emojis.forEach(function(emoji) {
-        Jimp.read(emojiPath + "img-twitter-64/" + emoji.image, function (err, lenna) {
+        Jimp.read(emojiPath + "img-twitter-64/" + emoji.image, function(err, lenna) {
             if (err) throw err;
 
             lenna
@@ -477,8 +472,8 @@ gulp.task("emoji", function(cb) {
     }).reduce(function(x, y) { return x.concat(y) }, []);
 
     emojis = emojis.sort(function(a, b) {
-        if(a.name < b.name) return -1;
-        if(a.name > b.name) return 1;
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
         return 0;
     });
 
@@ -505,7 +500,7 @@ gulp.task("app-loader", function() {
 
 gulp.task("locales", function() {
     var plugins = gulp.src(paths.app + "modules/**/locales/*.json")
-        .pipe(rename(function (localeFile) {
+        .pipe(rename(function(localeFile) {
             // rename app/modules/compiles-modules/tg-contrib/locales/locale-en.json
             // to tg-contrib/locale-en.json
 
@@ -518,15 +513,15 @@ gulp.task("locales", function() {
     var core = gulp.src(paths.locales);
 
     return mergeStream(plugins, core)
-            .pipe(gulpif(isDeploy, jsonminify()))
-            .pipe(gulp.dest(paths.distVersion + "locales"));
+        .pipe(gulpif(isDeploy, jsonminify()))
+        .pipe(gulp.dest(paths.distVersion + "locales"));
 });
 
-gulp.task("coffee-lint", function () {
+gulp.task("coffee-lint", function() {
     gulp.src([
-        paths.app + "modules/**/*.coffee",
-        "!" + paths.app + "modules/**/*.spec.coffee"
-    ])
+            paths.app + "modules/**/*.coffee",
+            "!" + paths.app + "modules/**/*.spec.coffee"
+        ])
         .pipe(gulpif(!isDeploy, cache(coffeelint(), {
             key: function(lintFile) {
                 return "coffee-lint" + lintFile.contents.toString('utf8');
@@ -547,7 +542,7 @@ gulp.task("coffee", function() {
     var filter = gulpFilter(['*', '!*.map']);
 
     return gulp.src(paths.coffee)
-        .pipe(order(paths.coffee_order, {base: '.'}))
+        .pipe(order(paths.coffee_order, { base: '.' }))
         .pipe(sourcemaps.init())
         .pipe(cache(coffee()))
         .on("error", function(err) {
@@ -562,12 +557,14 @@ gulp.task("coffee", function() {
 });
 
 gulp.task("moment-locales", function() {
-    replace_lang_path = { "zh-cn": "zh-hans",
-            "zh-tw": "zh-hant" }
+    replace_lang_path = {
+        "zh-cn": "zh-hans",
+        "zh-tw": "zh-hant"
+    }
 
     return gulp.src(paths.modules + "moment/locale/*")
         .pipe(gulpif(isDeploy, uglify()))
-        .pipe(rename(function (path) {
+        .pipe(rename(function(path) {
             if (path.basename in replace_lang_path) {
                 path.basename = replace_lang_path[path.basename]
             }
@@ -597,7 +594,7 @@ gulp.task("app-watch", ["coffee", "conf", "locales", "moment-locales", "app-load
 gulp.task("app-deploy", ["coffee", "conf", "locales", "moment-locales", "app-loader"], function() {
     return gulp.src(paths.distVersion + "js/app.js")
         .pipe(sourcemaps.init())
-            .pipe(uglify())
+        .pipe(uglify())
         .pipe(sourcemaps.write("./maps"))
         .pipe(gulp.dest(paths.distVersion + "js/"));
 });
@@ -608,7 +605,7 @@ gulp.task("app-deploy", ["coffee", "conf", "locales", "moment-locales", "app-loa
 ##############################################################################
 */
 gulp.task("clear", ["clear-sass-cache"], function(done) {
-  return cache.clearAll(done);
+    return cache.clearAll(done);
 });
 
 //SVG
@@ -634,7 +631,7 @@ gulp.task("copy-theme-fonts", function() {
 
 gulp.task("copy-images", function() {
     return gulp.src([paths.app + "/images/**/*", paths.app + '/modules/compile-modules/**/images/*'])
-        .pipe(gulpif(isDeploy, imagemin({progressive: true})))
+        .pipe(gulpif(isDeploy, imagemin({ progressive: true })))
         .pipe(gulp.dest(paths.distVersion + "/images/"));
 });
 
@@ -656,8 +653,8 @@ gulp.task("copy-prism", ["prism-languages"], function() {
 
 gulp.task("copy-theme-images", function() {
     return gulp.src(themes.current.path + "/images/**/*")
-        .pipe(gulpif(isDeploy, imagemin({progressive: true})))
-        .pipe(gulp.dest(paths.distVersion + "/images/"  + themes.current.name));
+        .pipe(gulpif(isDeploy, imagemin({ progressive: true })))
+        .pipe(gulp.dest(paths.distVersion + "/images/" + themes.current.name));
 });
 
 gulp.task("copy-extras", function() {
@@ -667,10 +664,9 @@ gulp.task("copy-extras", function() {
 
 gulp.task("link-images", ["copy-images"], function(cb) {
     try {
-        fs.unlinkSync(paths.dist+"images");
-    } catch (exception) {
-    }
-    fs.symlinkSync("./"+version+"/images", paths.dist+"images");
+        fs.unlinkSync(paths.dist + "images");
+    } catch (exception) {}
+    fs.symlinkSync("./" + version + "/images", paths.dist + "images");
     cb();
 });
 
@@ -696,9 +692,9 @@ gulp.task("delete-tmp", function() {
 
 gulp.task("unused-css", ["default"], function() {
     return gulp.src([
-        paths.distVersion + "js/app.js",
-        paths.tmp + "**/*.html"
-    ])
+            paths.distVersion + "js/app.js",
+            paths.tmp + "**/*.html"
+        ])
         .pipe(utils.unusedCss({
             css: paths.distVersion + "styles/theme-taiga.css"
         }));
@@ -730,7 +726,7 @@ gulp.task("express", function() {
 
     app.all("/*", function(req, res, next) {
         //Just send the index.html for other files to support HTML5Mode
-        res.sendFile("index.html", {root: __dirname + "/dist/"});
+        res.sendFile("index.html", { root: __dirname + "/dist/" });
     });
 
     app.listen(9001);

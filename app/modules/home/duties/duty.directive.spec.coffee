@@ -84,8 +84,8 @@ describe "dutyDirective", () ->
             ref: 1
             _name: "userstories"
             assigned_to_extra_info: {
-                photo: "http://jstesting.taiga.io/photo"
-                full_name_display: "Taiga testing js"
+                photo: "http://jstesting.circles.threefold.me/photo"
+                full_name_display: "Threefold Circles testing js"
             }
         })
 
@@ -95,7 +95,7 @@ describe "dutyDirective", () ->
 
         mockTgNavUrls.resolve
             .withArgs("project-userstories-detail", {project: "project-slug", ref: 1})
-            .returns("http://jstesting.taiga.io")
+            .returns("http://jstesting.circles.threefold.me")
 
         mockTranslate.instant
             .withArgs("COMMON.USER_STORY")

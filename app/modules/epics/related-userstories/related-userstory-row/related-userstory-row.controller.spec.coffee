@@ -82,7 +82,7 @@ describe "RelatedUserstoryRow", ->
         })
         member = RelatedUserstoryRowCtrl.userstory.get("assigned_to_extra_info")
         avatar = {
-            url: "http://taiga.io"
+            url: "http://circles.threefold.me"
             bg: "#AAAAAA"
         }
         mocks.tgAvatarService.getAvatar.withArgs(member).returns(avatar)
