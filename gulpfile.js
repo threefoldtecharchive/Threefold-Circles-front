@@ -50,7 +50,7 @@ var version = "v-" + Date.now();
 
 var paths = {};
 paths.app = "app/";
-paths.dist = "../Threefold-Circles-front-dist/dist/";
+paths.dist = "dist/";
 paths.distVersion = paths.dist + version + "/";
 paths.tmp = "tmp/";
 paths.extras = "extras/";
