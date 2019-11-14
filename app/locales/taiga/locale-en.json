@@ -1398,10 +1398,10 @@
    "ERROR":{ 
       "TEXT1":"Something happened and our Oompa Loompas are working on it.",
       "NOT_FOUND":"Not found",
-      "NOT_FOUND_TEXT":"Error 404. The page you are looking for no longer exists. Perhaps you can return back to Threefold Circle Cockpit homepage and see if you can find what you are looking for.",
+      "NOT_FOUND_TEXT":"Error 404. The page you are looking for was not found. Either it doesn't exist anymore, you don't have the permission or you are not logged in. Please return to Threefold Circleshomepage and see if you can find what you are looking for.",
       "PERMISSION_DENIED":"Permission denied",
       "PERMISSION_DENIED_TEXT":"You don't have permission to access this page.",
-      "VERSION_ERROR":"Someone inside Threefold Circle Cockpit has changed this before and our Oompa Loompas cannot apply your changes. Please reload and apply your changes again (they will be lost)."
+      "VERSION_ERROR":"Someone inside Threefold Circlehas changed this before and we cannot apply your changes. Please reload and apply your changes again (they will be lost)."
    },
    "TASKBOARD":{ 
       "PAGE_TITLE":"{{sprintName}} - Sprint checklist board - {{projectName}}",
