@@ -1820,7 +1820,7 @@
       "PAGE_TITLE":"Discover circles - Threefold Circle Cockpit",
       "PAGE_DESCRIPTION":"Searchable directory of Public Circles in ThreeFold Circle Cockpit. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active circles. Filter by Kanban or Scrum.",
       "DISCOVER_TITLE":"Discover circles",
-      "DISCOVER_SUBTITLE":"{circles, plural, one{One public circle to discover} other{# public circles to discover}}",
+      "DISCOVER_SUBTITLE":"{projects, plural, one{One public circle to discover} other{# public circles to discover}}",
       "MOST_ACTIVE":"Most active",
       "MOST_ACTIVE_EMPTY":"There are no ACTIVE circles yet",
       "MOST_LIKED":"Most liked",
