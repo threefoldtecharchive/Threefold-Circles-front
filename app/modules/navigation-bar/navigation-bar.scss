@@ -1,5 +1,4 @@
 $dropdown-width: 350px;
-
 .navbar {
     background-color: $primary;
     display: flex;
@@ -38,8 +37,8 @@ $dropdown-width: 350px;
     }
     .nav-right {
         margin-left: auto;
-        > a,
-        .topnav-dropdown-wrapper > a {
+        >a,
+        .topnav-dropdown-wrapper>a {
             color: $white;
             margin: 0;
             padding: .5rem 2rem;
@@ -59,14 +58,14 @@ $dropdown-width: 350px;
             transition: all .2s linear;
         }
     }
-    .nav-right > a,
-    .topnav-dropdown-wrapper > a {
+    .nav-right>a,
+    .topnav-dropdown-wrapper>a {
         color: $white;
         display: inline-block;
         transition: all .2s linear;
         &:hover {
             background: rgba($black, .2);
-            color: $primary-light;
+            color: $white;
             svg {
                 fill: $primary-25;
                 stroke: $primary-25;
@@ -81,7 +80,6 @@ $dropdown-width: 350px;
                 padding-right: 1rem;
             }
         }
-
     }
     .user-avatar img {
         @include avatar-img(2.5rem);
@@ -182,7 +180,6 @@ $dropdown-width: 350px;
     }
 }
 
-
 @keyframes highlightFadeOut {
     0% {
         background: $primary-light;
@@ -205,7 +202,6 @@ $dropdown-width: 350px;
         background: $primary;
     }
 }
-
 
 .topnav-dropdown-wrapper {
     position: relative;
@@ -259,7 +255,6 @@ $dropdown-width: 350px;
         position: absolute;
         top: 2.4rem;
         z-index: 999;
-
         .empty {
             color: $gray-light;
             font-size: .9em;

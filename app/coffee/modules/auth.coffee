@@ -160,9 +160,8 @@ class AuthService extends taiga.Service
             @rootscope.$broadcast("auth:refresh", user)
             return user
 
-    login: (data, type) ->
+    login: (data) ->
         url = @urls.resolve("auth")
-
         data = _.clone(data, false)
         data.type = if type then type else "normal"
 
@@ -174,6 +173,14 @@ class AuthService extends taiga.Service
             @.setUser(user)
             @rootscope.$broadcast("auth:login", user)
             return user
+
+    threebot: (data, $route) ->        
+        @.removeToken()
+        user = @model.make_model("users", data)
+        @.setToken(user.auth_token)
+        @.setUser(user)
+        $route.reload()
+        return user
 
     logout: ->
         @.removeToken()
@@ -276,8 +283,23 @@ module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeP
                                              "$tgTemplate", PublicRegisterMessageDirective])
 
 
+ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
+    link = ($el, $scope) ->    
+
+        $.ajax($config.get('api') + "threebot/callback", {
+            type: 'GET',
+            data: $routeParams,
+            success: (res, status, xhr) -> $auth.threebot(res, $route)
+            error: (xhr, status, err) -> console.log(err)
+        });
+
+    return {link:link}
+
+module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig",  ThreeBotLoginDirective])
+
 LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $events, $translate, $window, $analytics) ->
-    link = ($scope, $el, $attrs) ->
+    link = ($scope, $el, $attrs) ->    
+
         form = new checksley.Form($el.find("form.login-form"))
 
         if $routeParams['next'] and $routeParams['next'] != $navUrls.resolve("login")

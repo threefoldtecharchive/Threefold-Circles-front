@@ -38,7 +38,7 @@ taiga.sessionId = taiga.generateUniqueSessionIdentifier()
 
 
 configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEventsProvider,
-             $compileProvider, $translateProvider, $translatePartialLoaderProvider, $animateProvider) ->
+             $compileProvider, $translateProvider, $translatePartialLoaderProvider, $animateProvider, $auth) ->
 
     $animateProvider.classNameFilter(/^(?:(?!ng-animate-disabled).)*$/)
 
@@ -512,23 +512,32 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
     )
 
     # Auth
-    $routeProvider.when("/login",
+    # $routeProvider.when("/login",
+    #     {
+    #         templateUrl: "auth/login.html",
+    #         title: "LOGIN.PAGE_TITLE",
+    #         description: "LOGIN.PAGE_DESCRIPTION",
+    #         disableHeader: true,
+    #         controller: "LoginPage",
+    #     }
+    # )
+
+    $routeProvider.when("/threebot",
         {
-            templateUrl: "auth/login.html",
+            templateUrl: "auth/threebot-login.html",
             title: "LOGIN.PAGE_TITLE",
             description: "LOGIN.PAGE_DESCRIPTION",
             disableHeader: true,
-            controller: "LoginPage",
-        }
-    )
-    $routeProvider.when("/register",
-        {
-            templateUrl: "auth/register.html",
-            title: "REGISTER.PAGE_TITLE",
-            description: "REGISTER.PAGE_DESCRIPTION",
-            disableHeader: true
-        }
-    )
+            controller: "LoginPage"
+        })
+    # $routeProvider.when("/register",
+    #     {
+    #         templateUrl: "auth/register.html",
+    #         title: "REGISTER.PAGE_TITLE",
+    #         description: "REGISTER.PAGE_DESCRIPTION",
+    #         disableHeader: true
+    #     }
+    # )
     $routeProvider.when("/forgot-password",
         {
             templateUrl: "auth/forgot-password.html",

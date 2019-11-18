@@ -29,9 +29,17 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
         scope.vm.customSupportUrl = config.get("supportUrl")
 
         scope.vm.login = ->
-            nextUrl = encodeURIComponent(locationService.url())
-            locationService.url(navUrlsService.resolve("login"))
-            locationService.search({next: nextUrl})
+            url = config.get('api') + "threebot/login"
+            # locationService.url(navUrlsService.resolve("login"))
+            # locationService.search({next: nextUrl})
+            $.ajax url,
+            type: 'GET'
+
+            error: (jqXHR, textStatus, errorThrown) ->
+                console.log('Error', textStatus)
+            success: (data, textStatus, jqXHR) ->
+                locationService.url = data.url
+                window.location.href = locationService.url;
 
         scope.$on "$routeChangeSuccess", () ->
             scope.vm.active = null
@@ -44,6 +52,8 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
                     scope.vm.active = 'notifications'
                 when "/projects/"
                     scope.vm.active = 'projects'
+                when "/threebot"
+                    scope.vm.active = 'dashboard'
 
     directive = {
         templateUrl: "navigation-bar/navigation-bar.html"

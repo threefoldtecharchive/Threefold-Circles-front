@@ -20,10 +20,10 @@
 class ProfileHints
     HINTS: [
         { #hint1
-            url: "https://tree.taiga.io/support/admin/import-export-projects/"
+            url: "https://support.grid.tf/"
         },
         { #hint2
-            url: "https://tree.taiga.io/support/admin/custom-fields/"
+            url: "https://support.grid.tf/"
         },
         { #hint3
         },

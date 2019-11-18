@@ -80,7 +80,7 @@ describe('auth', function() {
 
             let url = await browser.getCurrentUrl();
 
-            await browser.wait(async () => {
+            await browser.wait(async() => {
                 return url === browser.params.glob.host + 'discover';
             }, 2000);
         });
@@ -110,7 +110,7 @@ describe('auth', function() {
                 user.username = "username-" + Math.random();
                 user.fullname = "fullname-" + Math.random();
                 user.password = "passsword-" + Math.random();
-                user.email = "email-" + Math.random() + "@taiga.io";
+                user.email = "email-" + Math.random() + "@threefold.io";
 
                 $('input[name="username"]').sendKeys(user.username);
                 $('input[name="full_name"]').sendKeys(user.fullname);
@@ -173,20 +173,20 @@ describe('auth', function() {
                 browser.get(browser.params.glob.host + 'forgot-password');
             });
 
-            it ("screenshot", async function() {
+            it("screenshot", async function() {
                 await utils.common.waitLoader();
 
                 utils.common.takeScreenshot("auth", "remember-password");
             });
 
-            it ("error", function() {
+            it("error", function() {
                 $('input[name="username"]').sendKeys("xxxxxxxx");
                 $('.submit-button').click();
 
                 expect(utils.notifications.errorLight.open()).to.be.eventually.equal(true);
             });
 
-            it ("success", async function() {
+            it("success", async function() {
                 $('input[name="username"]').sendKeys(user.username);
                 $('.submit-button').click();
 

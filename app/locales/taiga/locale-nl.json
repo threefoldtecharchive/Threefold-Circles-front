@@ -310,8 +310,8 @@
         }
     },
     "LOGIN": {
-        "PAGE_TITLE": "Login - Taiga",
-        "PAGE_DESCRIPTION": "Inloggen op Taiga, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
+        "PAGE_TITLE": "Login - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Inloggen op ThreeFold Circles, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
     },
     "AUTH": {
         "INVITED_YOU": "Heeft je uitgenodigd voor het project",
@@ -320,7 +320,7 @@
         "CREATE_ACCOUNT": "maak hier je gratis account aan"
     },
     "LOGIN_COMMON": {
-        "HEADER": "Ik heb al een Taiga login",
+        "HEADER": "Ik heb al een ThreeFold Circles login",
         "PLACEHOLDER_AUTH_NAME": "Gebruikersnaam of email (case sensitive)",
         "LINK_FORGOT_PASSWORD": "Vergeten?",
         "TITLE_LINK_FORGOT_PASSWORD": "Ben je je wachtwoord vergeten?",
@@ -331,14 +331,14 @@
     },
     "LOGIN_FORM": {
         "ERROR_AUTH_INCORRECT": "Volgens onze Oempa-Loempa's, zijn je gebruikers/email of wachtwoord incorrect.",
-        "SUCCESS": "Onze Oempa-Loempa's zijn blij, welkom bij Taiga."
+        "SUCCESS": "Onze Oempa-Loempa's zijn blij, welkom bij ThreeFold Circles."
     },
     "REGISTER": {
-        "PAGE_TITLE": "Registreer - Taiga",
-        "PAGE_DESCRIPTION": "Maak je account op Taiga, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
+        "PAGE_TITLE": "Registreer - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Maak je account op ThreeFold Circles, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
     },
     "REGISTER_FORM": {
-        "TITLE": "Registreer een nieuw Taiga account (gratis)",
+        "TITLE": "Registreer een nieuw ThreeFold Circles account (gratis)",
         "PLACEHOLDER_NAME": "Kies een gebruikersnaam (hoofdlettergevoelig)",
         "PLACEHOLDER_FULL_NAME": "Kies je volledige naam",
         "PLACEHOLDER_EMAIL": "Jouw e-mail",
@@ -348,8 +348,8 @@
         "LINK_LOGIN": "Ben je al geregistreerd? Log in"
     },
     "FORGOT_PASSWORD": {
-        "PAGE_TITLE": "Wachtwoord vergeten - Taiga",
-        "PAGE_DESCRIPTION": "Geef je gebruikersnaam of e-mail in om een nieuw wachtwoord te krijgen. Zo heb je weer toegang tot Taiga."
+        "PAGE_TITLE": "Wachtwoord vergeten - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Geef je gebruikersnaam of e-mail in om een nieuw wachtwoord te krijgen. Zo heb je weer toegang tot ThreeFold Circles."
     },
     "FORGOT_PASSWORD_FORM": {
         "TITLE": "Oeps, ben je je wachtwoord vergeten?",
@@ -362,7 +362,7 @@
         "ERROR": "Volgens onze Oempa-Loempa's ben je nog niet geregisteerd"
     },
     "CHANGE_PASSWORD": {
-        "PAGE_TITLE": "Verander je wachtwoord - Taiga",
+        "PAGE_TITLE": "Verander je wachtwoord - ThreeFold Circles",
         "SECTION_NAME": "Wachtwoord wijzigen",
         "FIELD_CURRENT_PASSWORD": "Huidig wachtwoord",
         "PLACEHOLDER_CURRENT_PASSWORD": "Je huidige wachtwoord (of leeg als je nog geen wachtwoord hebt)",
@@ -373,7 +373,7 @@
         "ERROR_PASSWORD_MATCH": "De wachtwoorden komen niet overeen"
     },
     "CHANGE_PASSWORD_RECOVERY_FORM": {
-        "TITLE": "Maak een nieuwe Taiga pass aan",
+        "TITLE": "Maak een nieuwe ThreeFold Circles pass aan",
         "SUBTITLE": "En hé, misschien dat je wat ijzer-rijk voedsel kunt eten, het is goed voor je brein :P",
         "PLACEHOLDER_NEW_PASSWORD": "Nieuw wachtwoord",
         "PLACEHOLDER_RE_TYPE_NEW_PASSWORD": "Herhaal wachtwoord",
@@ -382,17 +382,17 @@
         "SUCCESS": "Onze Oempa-Loempas hebben je nieuwe wachtwoord opgeslagen.<br /> Probeer ermee <strong>in te loggen</strong>."
     },
     "INVITATION": {
-        "PAGE_TITLE": "Uitnodiging accepteren - Taiga",
-        "PAGE_DESCRIPTION": "Accepteer de uitnodiging voor een project in Taiga, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
+        "PAGE_TITLE": "Uitnodiging accepteren - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Accepteer de uitnodiging voor een project in ThreeFold Circles, een project management platform voor startups en agile ontwikkelaars & designers die een simpele, mooie tool willen om werken echt leuk te maken."
     },
     "INVITATION_LOGIN_FORM": {
         "NOT_FOUND": "Onze Oompa Loompa's kunnen je uitnodiging niet vinden.",
         "SUCCESS": "Je bent met succes toegetreden tot dit project, Welkom bij {{project_name}}"
     },
     "HOME": {
-        "PAGE_TITLE": "Home -Taiga",
-        "PAGE_DESCRIPTION": "De Taiga start pagina met jouw projecten en de aan jou toegewezen en gevolgde user stories, taken en kwesties",
-        "EMPTY_WORKING_ON": "Voelt leeg, vind je niet? Begin met Taiga te werken en hier zullen de stories, taken en kwesties verschijnen waar jij aan werkt.",
+        "PAGE_TITLE": "Home -ThreeFold Circles",
+        "PAGE_DESCRIPTION": "De ThreeFold Circles start pagina met jouw projecten en de aan jou toegewezen en gevolgde user stories, taken en kwesties",
+        "EMPTY_WORKING_ON": "Voelt leeg, vind je niet? Begin met ThreeFold Circles te werken en hier zullen de stories, taken en kwesties verschijnen waar jij aan werkt.",
         "EMPTY_WATCHING": "<strong>Volg</strong> User Stories, Taken, Kwesties binnen jouw projecten en ontvang een bericht bij veranderingen :)",
         "EMPTY_PROJECT_LIST": "Je hebt nog geen projecten",
         "WORKING_ON_SECTION": "Werkt aan",
@@ -442,7 +442,7 @@
         }
     },
     "PROJECTS": {
-        "PAGE_TITLE": "Mijn projecten - Taiga",
+        "PAGE_TITLE": "Mijn projecten - ThreeFold Circles",
         "PAGE_DESCRIPTION": "Een lijst met al jouw projecten, je kunt deze herodenen of een nieuwe aanmaken.",
         "MY_PROJECTS": "Mijn projecten"
     },
@@ -539,7 +539,7 @@
             "RECRUITING": "Is dit project opzoek naar mensen?",
             "RECRUITING_MESSAGE": "Who are you looking for?",
             "RECRUITING_PLACEHOLDER": "Define the profiles you are looking for",
-            "FEEDBACK": "Receive feedback from Taiga users?",
+            "FEEDBACK": "Receive feedback from ThreeFold Circles users?",
             "PUBLIC_PROJECT": "Open project",
             "PRIVATE_PROJECT": "Gesloten project",
             "PRIVATE_OR_PUBLIC": "What's the difference between public and private projects?",
@@ -675,7 +675,7 @@
             "WARNING_DELETE_ROLE": "Be careful! All role estimations will be removed",
             "ERROR_DELETE_ALL": "Je kan niet alle waarden verwijderen",
             "EXTERNAL_USER": "Externe gebruiker",
-            "NOTE_EXTERNAL_USERS": "<strong>Note:</strong> by External User we mean any anonymous user not belonging to the Taiga platform, including search engines. Please use this role with care."
+            "NOTE_EXTERNAL_USERS": "<strong>Note:</strong> by External User we mean any anonymous user not belonging to the ThreeFold Circles platform, including search engines. Please use this role with care."
         },
         "THIRD_PARTIES": {
             "SECRET_KEY": "Geheime sleutel",
@@ -825,7 +825,7 @@
             "CONTACTS": "Contacten",
             "CONTACTS_EMPTY": "{{username}} heeft nog geen contacten",
             "CURRENT_USER_CONTACTS_EMPTY": "Je hebt nog geen contacten",
-            "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "De mensen waarmee je via Taiga werkt zullen automatisch je contacten worden",
+            "CURRENT_USER_CONTACTS_EMPTY_EXPLAIN": "De mensen waarmee je via ThreeFold Circles werkt zullen automatisch je contacten worden",
             "TABS": {
                 "ACTIVITY_TAB": "Tijdlijn",
                 "ACTIVITY_TAB_TITLE": "Alle activiteit van deze gebruiker weergeven",
@@ -892,7 +892,7 @@
             "ACTION_CREATE_PROJECT": "Project aanmaken",
             "MANAGE_PROJECTS": "Manage projects",
             "TITLE_CREATE_PROJECT": "Project aanmaken",
-            "HELP_TITLE": "Taiga support pagina",
+            "HELP_TITLE": "ThreeFold Circles support pagina",
             "HELP": "Help",
             "HOMEPAGE": "Startpagina",
             "FEEDBACK_TITLE": "Stuur feedback",
@@ -946,7 +946,7 @@
             "DUPLICATE": "Duplicate project",
             "DUPLICATE_DESC": "Start clean and keep your configuration",
             "IMPORT": "Importeer project",
-            "IMPORT_DESC": "Import your project from multiple platforms into Taiga",
+            "IMPORT_DESC": "Import your project from multiple platforms into ThreeFold Circles",
             "INVITE": "Invite to the project",
             "SOLO_PROJECT": "You'll be alone in this project",
             "INVITE_LATER": "(You'll be able to invite more members later)",
@@ -968,7 +968,7 @@
         },
         "IMPORT": {
             "TITLE": "Import Project",
-            "DESCRIPTION": "Import your project from multiple platforms into Taiga",
+            "DESCRIPTION": "Import your project from multiple platforms into ThreeFold Circles",
             "ASYNC_IN_PROGRESS_TITLE": "Onze Oempa-Loempa's zijn je project aan het importeren",
             "ASYNC_IN_PROGRESS_MESSAGE": "Dit proces kan een paar minuten duren <br/> We sturen je een email als het gereed is",
             "UPLOAD_IN_PROGRESS_MESSAGE": "{{uploadedSize}} van {{totalSize}} geupload",
@@ -979,17 +979,17 @@
             "SYNC_SUCCESS": "Je project werd met succes geïmporteerd",
             "IMPORT": "Import",
             "WHO_IS": "Their tasks will be assigned to ...",
-            "WRITE_EMAIL": "Or if you want, write the email that this user uses in Taiga",
+            "WRITE_EMAIL": "Or if you want, write the email that this user uses in ThreeFold Circles",
             "SEARCH_CONTACT": "Or if you want, search in your contacts",
-            "WRITE_EMAIL_LABEL": "Write the email that this user uses in Taiga",
+            "WRITE_EMAIL_LABEL": "Write the email that this user uses in ThreeFold Circles",
             "ACCEEDE": "Acceede",
             "PROJECT_MEMBERS": "Project Members",
-            "PROCESS_DESCRIPTION": "Tell us who from Taiga you want to assign the tasks of {{platform}}",
+            "PROCESS_DESCRIPTION": "Tell us who from ThreeFold Circles you want to assign the tasks of {{platform}}",
             "MATCH": "Is <strong>{{user_external}}</strong> the same person as <strong>{{user_internal}}</strong>?",
             "CHOOSE": "Kies gebruiker",
             "LINKS": "Links with {{platform}}",
             "LINKS_DESCRIPTION": "Do you want to keep the link of each item with the original {{platform}} card?",
-            "WARNING_MAIL_USER": "Note that if the user does not have a Taiga account we will not be able to assign the tasks to him.",
+            "WARNING_MAIL_USER": "Note that if the user does not have a ThreeFold Circles account we will not be able to assign the tasks to him.",
             "ASSIGN": "Assign",
             "PROJECT_SELECTOR": {
                 "NO_RESULTS": "It looks like nothing was found with your search criteria",
@@ -1032,11 +1032,11 @@
                 "DESCRIPTION": "There are still unidentified people. The cards assigned to these people will remain unassigned. Check all the contacts to not lose that information.",
                 "CHECK": "Check contacts"
             },
-            "TAIGA": {
-                "SELECTOR": "Import your Taiga project"
+            "ThreeFold Circles": {
+                "SELECTOR": "Import your ThreeFold Circles project"
             },
             "TRELLO": {
-                "SELECTOR": "Import your Trello boards into Taiga",
+                "SELECTOR": "Import your Trello boards into ThreeFold Circles",
                 "CHOOSE_PROJECT": "Choose board that you want to import",
                 "NO_PROJECTS": "It seems you have no boards in Trello"
             },
@@ -1044,7 +1044,7 @@
                 "SELECTOR": "Importeer je GitHub project kwesties",
                 "CHOOSE_PROJECT": "Find the project you want to import",
                 "NO_PROJECTS": "It seems you have no porjects in GitHub",
-                "HOW_DO_YOU_WANT_TO_IMPORT": "Hoe wil je je kwesties in Taiga importeren?",
+                "HOW_DO_YOU_WANT_TO_IMPORT": "Hoe wil je je kwesties in ThreeFold Circles importeren?",
                 "KANBAN_PROJECT": "As user stories in a kanban project",
                 "KANBAN_PROJECT_DESCRIPTION": "After that you can enable scrum with backlog.",
                 "SCRUM_PROJECT": "As user stories in a scrum project",
@@ -1058,8 +1058,8 @@
                 "NO_PROJECTS": "It seems you have no porjects in Asana",
                 "KANBAN_PROJECT": "Kanban",
                 "SCRUM_PROJECT": "Scrum",
-                "CREATE_AS_SCRUM_DESCRIPTION": "The tasks and sub-tasks of your project will be created as Taiga user stories and tasks.",
-                "CREATE_AS_KANBAN_DESCRIPTION": "The tasks and sub-tasks of your project will be created as Taiga user stories and tasks."
+                "CREATE_AS_SCRUM_DESCRIPTION": "The tasks and sub-tasks of your project will be created as ThreeFold Circles user stories and tasks.",
+                "CREATE_AS_KANBAN_DESCRIPTION": "The tasks and sub-tasks of your project will be created as ThreeFold Circles user stories and tasks."
             },
             "JIRA": {
                 "SELECTOR": "Import your Jira project and choose how to manage it",
@@ -1070,17 +1070,17 @@
                 "KANBAN_PROJECT": "Kanban",
                 "SCRUM_PROJECT": "Scrum",
                 "ISSUES_PROJECT": "Kwesties",
-                "CREATE_AS_SCRUM_DESCRIPTION": "De kwesties en sub-kwesties van je project zullen in Taiga als user stories en taken worden aangemaakt.",
-                "CREATE_AS_KANBAN_DESCRIPTION": "De kwesties en sub-kwesties van je project zullen in Taiga als user stories en taken worden aangemaakt.",
-                "CREATE_AS_ISSUES_DESCRIPTION": "What do you want to do with sub-issues from the Jira project? (Taiga doesn't allow sub-issues)",
-                "CREATE_NEW_ISSUES": "Convert sub-issues to new Taiga issues",
+                "CREATE_AS_SCRUM_DESCRIPTION": "De kwesties en sub-kwesties van je project zullen in ThreeFold Circles als user stories en taken worden aangemaakt.",
+                "CREATE_AS_KANBAN_DESCRIPTION": "De kwesties en sub-kwesties van je project zullen in ThreeFold Circles als user stories en taken worden aangemaakt.",
+                "CREATE_AS_ISSUES_DESCRIPTION": "What do you want to do with sub-issues from the Jira project? (ThreeFold Circles doesn't allow sub-issues)",
+                "CREATE_NEW_ISSUES": "Convert sub-issues to new ThreeFold Circles issues",
                 "NOT_CREATE_NEW_ISSUES": "Do not import sub-issues"
             }
         }
     },
     "LIGHTBOX": {
         "DELETE_ACCOUNT": {
-            "CONFIRM": "Weet je zeker dat je je Taiga account wilt verwijderen?",
+            "CONFIRM": "Weet je zeker dat je je ThreeFold Circles account wilt verwijderen?",
             "CANCEL": "Terug naar instellingen",
             "ACCEPT": "Verwijder account",
             "BLOCK_PROJECT": "Note that all the projects you own projects will be <strong>blocked</strong> after you delete your account. If you do not want a project blocked, transfer ownership to another member of each project prior to deleting your account."
@@ -1108,11 +1108,11 @@
             "INVITE": "Uitnodigen",
             "CHOOSE_ROLE": "Kies een rol",
             "PLACEHOLDER_INVITATION_TEXT": "(Optioneel) Voeg een gepersonaliseerd bericht toe aan je uitnodiging. Vertel iets leuks aan je nieuwe leden ;-)",
-            "HELP_TEXT": "Als gebruikers al geregistreerd zijn op Taiga, zullen ze automatisch toegevoegd worden. Anders krijgen ze een uitnodiging."
+            "HELP_TEXT": "Als gebruikers al geregistreerd zijn op ThreeFold Circles, zullen ze automatisch toegevoegd worden. Anders krijgen ze een uitnodiging."
         },
         "FEEDBACK": {
             "TITLE": "Vertel ons iets...",
-            "COMMENT": "...een bug, suggesties, iets cools... of zelfs je ergste nachtmerrie met Taiga.",
+            "COMMENT": "...een bug, suggesties, iets cools... of zelfs je ergste nachtmerrie met ThreeFold Circles.",
             "ACTION_SEND": "Stuur feedback"
         },
         "SEARCH": {
@@ -1252,15 +1252,15 @@
         "RELATE_TO_EPIC": "Link to Epic",
         "REMOVE_RELATIONSHIP_WITH_EPIC": "Remove Epic relationship",
         "TRIBE": {
-            "PUBLISH": "Publish as Gig in Taiga Tribe",
+            "PUBLISH": "Publish as Gig in ThreeFold Circles Tribe",
             "PUBLISH_INFO": "More info",
-            "PUBLISH_TITLE": "More info on publishing in Taiga Tribe",
-            "PUBLISHED_AS_GIG": "Story published as Gig in Taiga Tribe",
+            "PUBLISH_TITLE": "More info on publishing in ThreeFold Circles Tribe",
+            "PUBLISHED_AS_GIG": "Story published as Gig in ThreeFold Circles Tribe",
             "EDIT_LINK": "Edit link",
             "CLOSE": "Close",
-            "SYNCHRONIZE_LINK": "synchronize with Taiga Tribe",
+            "SYNCHRONIZE_LINK": "synchronize with ThreeFold Circles Tribe",
             "PUBLISH_MORE_INFO_TITLE": "Do you need somebody for this task?",
-            "PUBLISH_MORE_INFO_TEXT": "<p>If you need help with a particular piece of work you can easily create gigs on<a href='http://taigatribe.com' title='Taiga Tribe'> Taiga Tribe </a> and receive help from all over the world. You will be able to control and manage the gig enjoying a great community eager to contribute.</p><p><a href='http://taigatribe.com' title='Taiga Tribe'> TaigaTribe </a>  was born as a Taiga sibling. Both platforms can live separately but we believe that there is much power in using them combined so we are making sure the integration works like a charm.</p>"
+            "PUBLISH_MORE_INFO_TEXT": "<p>If you need help with a particular piece of work you can easily create gigs on<a href='http://ThreeFold Circlestribe.com' title='ThreeFold Circles Tribe'> ThreeFold Circles Tribe </a> and receive help from all over the world. You will be able to control and manage the gig enjoying a great community eager to contribute.</p><p><a href='http://ThreeFold Circlestribe.com' title='ThreeFold Circles Tribe'> ThreeFold CirclesTribe </a>  was born as a ThreeFold Circles sibling. Both platforms can live separately but we believe that there is much power in using them combined so we are making sure the integration works like a charm.</p>"
         }
     },
     "COMMENTS": {
@@ -1398,10 +1398,10 @@
     "ERROR": {
         "TEXT1": "Er is iets gebeurd en onze Oempa-Loempa's zijn er mee bezig.",
         "NOT_FOUND": "Niet gevonden",
-        "NOT_FOUND_TEXT": "Error 404. De pagina die je zoekt bestaat niet meer. Misschien kan je terugkeren naar de TAIGA startpagina en kijken of je kan vinden wat je zoekt.",
+        "NOT_FOUND_TEXT": "Error 404. De pagina die je zoekt bestaat niet meer. Misschien kan je terugkeren naar de ThreeFold Circles startpagina en kijken of je kan vinden wat je zoekt.",
         "PERMISSION_DENIED": "Niet toegestaan",
         "PERMISSION_DENIED_TEXT": "Je hebt geen toegangsrechten tot deze pagina",
-        "VERSION_ERROR": "Iemand bij Taiga heeft dit vooraf veranderd en onze Oempa-Loempa's konden je veranderingen niet toepassen. Gelieve te herladen en je veranderingen opnieuw toe te passen (ze zullen verloren gaan)"
+        "VERSION_ERROR": "Iemand bij ThreeFold Circles heeft dit vooraf veranderd en onze Oempa-Loempa's konden je veranderingen niet toepassen. Gelieve te herladen en je veranderingen opnieuw toe te passen (ze zullen verloren gaan)"
     },
     "TASKBOARD": {
         "PAGE_TITLE": "{{sprintName}} - Sprint taakbord - {{projectName}}",
@@ -1475,7 +1475,7 @@
     },
     "CANCEL_ACCOUNT": {
         "TITLE": "Annuleer je account",
-        "SUBTITLE": "We vinden het spijtig dat je de taiga verlaat, hopelijk heb je van je verblijf genoten :)",
+        "SUBTITLE": "We vinden het spijtig dat je de ThreeFold Circles verlaat, hopelijk heb je van je verblijf genoten :)",
         "PLACEHOLDER_INPUT_TOKEN": "annuleer account token",
         "ACTION_LEAVING": "Ja, ik ga weg!",
         "SUCCESS": "Onze Oempa-Loempa's hebben je account verwijderd"
@@ -1618,7 +1618,7 @@
         },
         "EVENTS": {
             "SECTION_NAME": "Events",
-            "SECTION_DESCRIPTION": "Important events in Taiga header",
+            "SECTION_DESCRIPTION": "Important events in ThreeFold Circles header",
             "SECTION_DESCRIPTION_EXPANDED": "(direct mentions, updates in items that you are watching...)",
             "COLUMN_ENABLED": "Enabled",
             "COLUMN_PROJECT": "Project"
@@ -1626,8 +1626,8 @@
     },
     "USER_PROFILE": {
         "ACTION_USE_GRAVATAR": "Use default image",
-        "ACTION_DELETE_ACCOUNT": "Verwijderd Taiga account",
-        "ACTION_DOWNLOAD_PROFILE": "Download Taiga profile",
+        "ACTION_DELETE_ACCOUNT": "Verwijderd ThreeFold Circles account",
+        "ACTION_DOWNLOAD_PROFILE": "Download ThreeFold Circles profile",
         "CHANGE_EMAIL_SUCCESS": "<strong>Controleer je inbox!</strong><br />We hebben je een email gestuurd met instructie om je nieuwe adres in te stellen",
         "CHANGE_PHOTO": "Foto wijzigen",
         "FIELD": {
@@ -1676,7 +1676,7 @@
         "LINK": "Als je wilt weten hoe, bezoek dan onze support-pagina",
         "LINK_TITLE": "Bezoek onze supportpagina",
         "HINT1_TITLE": "Wist je dat je nu projecten kunt importeren en exporteren?",
-        "HINT1_TEXT": "Dit maakt het mogelijk om al je data vanuit de ene taiga te verplaatsen naar een andere",
+        "HINT1_TEXT": "Dit maakt het mogelijk om al je data vanuit de ene ThreeFold Circles te verplaatsen naar een andere",
         "HINT2_TITLE": "Weet je dat je custom velden kunt aanmaken?",
         "HINT2_TEXT": "Teams can now create custom fields as a flexible means to enter specific data useful for their particular workflow.",
         "HINT3_TITLE": "Reorder your projects to feature those most relevant to you.",
@@ -1719,7 +1719,7 @@
         "US_REMOVED_FROM_MILESTONE": "{{username}} heeft de US {{obj_name}} toegevoegd aan de Backlog",
         "BLOCKED": "{{username}} heeft {{obj_name}} geblokkeerd",
         "UNBLOCKED": "{{username}} heeft {{obj_name}} gedeblokkeerd",
-        "NEW_USER": "{{username}} heeft zich aangemeld voor Taiga",
+        "NEW_USER": "{{username}} heeft zich aangemeld voor ThreeFold Circles",
         "ITEM_TYPES": {
             "USERSTORY": "User Story",
             "ISSUE": "Issue",
@@ -1749,7 +1749,7 @@
     "EXTERNAL_APP": {
         "PAGE_TITLE": "An external app requires authentication",
         "PAGE_DESCRIPTION": "An external app requires authentication",
-        "AUTHORIZATION_REQUEST": "Authorize {{application}} to use your Taiga account?",
+        "AUTHORIZATION_REQUEST": "Authorize {{application}} to use your ThreeFold Circles account?",
         "LOGIN_WITH_ANOTHER_USER": "Login with another user",
         "AUTHORIZE_APP": "Authorize app",
         "CANCEL": "Annuleren"
@@ -1773,11 +1773,11 @@
             "STEP3": {
                 "TITLE": "Volgers",
                 "TEXT1": "And right here you will find the ones in your projects that you want to know about.",
-                "TEXT2": "You are already working with Taiga ;)"
+                "TEXT2": "You are already working with ThreeFold Circles ;)"
             },
             "STEP4": {
                 "TITLE": "Laten we beginnen",
-                "TEXT1": "You can start by creating your first Taiga project.",
+                "TEXT1": "You can start by creating your first ThreeFold Circles project.",
                 "TEXT2": "Veel succes!"
             }
         },
@@ -1817,8 +1817,8 @@
         }
     },
     "DISCOVER": {
-        "PAGE_TITLE": "Discover projects - Taiga",
-        "PAGE_DESCRIPTION": "Searchable directory of Public Projects in Taiga. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
+        "PAGE_TITLE": "Discover projects - ThreeFold Circles",
+        "PAGE_DESCRIPTION": "Searchable directory of Public Projects in ThreeFold Circles. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
         "DISCOVER_TITLE": "Discover projects",
         "DISCOVER_SUBTITLE": "{projects, plural, one{One public project to discover} other{# public projects to discover}}",
         "MOST_ACTIVE": "Most active",
@@ -1840,8 +1840,8 @@
             "CLEAR": "Filters ongedaan maken"
         },
         "SEARCH": {
-            "PAGE_TITLE": "Search - Discover projects - Taiga",
-            "PAGE_DESCRIPTION": "Searchable directory of Public Projects in Taiga. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
+            "PAGE_TITLE": "Search - Discover projects - ThreeFold Circles",
+            "PAGE_DESCRIPTION": "Searchable directory of Public Projects in ThreeFold Circles. Explore backlogs, timelines, issues, and teams. Check out the most liked or most active projects. Filter by Kanban or Scrum.",
             "INPUT_PLACEHOLDER": "Typ iets...",
             "ACTION_TITLE": "Zoek",
             "RESULTS": "Search results"
