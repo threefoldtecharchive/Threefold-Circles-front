@@ -8,6 +8,7 @@
       "DATE":"DD MMM YYYY",
       "DATETIME":"DD MMM YYYY HH:mm",
       "SAVE":"Save",
+      "CONNECT": "Link 3Bot Account",
       "CANCEL":"Cancel",
       "ACCEPT":"Accept",
       "DELETE":"Delete",
@@ -1611,10 +1612,15 @@
       },
       "PROJECT_SETTINGS":{ 
          "SET_START_PAGES":"Set start pages",
+         "3BOT_LOGIN_SETTING": "3Bot Login Settings",
          "START_PAGES_PER_PROJECT":"Set start pages per circle",
          "COLUMN_PROJECT":"circle",
          "COLUMN_STARTPAGE":"Start page",
          "DEFAULT_VALUE":"Default"
+      },
+      "3BOT_SETTINGS":{ 
+         "PAGE_TITLE":"3BOT Login Settings - Threefold Circle Cockpit",
+         "SECTION_NAME":"3BOT Login Settings"
       },
       "EVENTS":{ 
          "SECTION_NAME":"Events",
