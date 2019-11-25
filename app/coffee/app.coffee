@@ -109,7 +109,7 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
     )
 
     # My Projects
-    $routeProvider.when("/projects/",
+    $routeProvider.when("/projects",
         {
             templateUrl: "projects/listing/projects-listing.html",
             access: {

@@ -319,7 +319,7 @@
       "INVITED_YOU":"has invited you to join the circle",
       "NOT_REGISTERED_YET":"Not registered yet?",
       "REGISTER":"Register",
-      "CREATE_ACCOUNT":"create your free account here"
+      "CREATE_ACCOUNT":"Signup with 3BOT"
    },
    "LOGIN_COMMON":{ 
       "HEADER":"I already have a Threefold Circle Cockpit login",
@@ -333,7 +333,9 @@
    },
    "LOGIN_FORM":{ 
       "ERROR_AUTH_INCORRECT":"According to our Oompa Loompas, your username/email or password are incorrect.",
-      "SUCCESS":"Our Oompa Loompas are happy, welcome to Threefold Circle Cockpit."
+      "SUCCESS":"Our Oompa Loompas are happy, welcome to Threefold Circle Cockpit.",
+      "ERROR_MESSAGE": "Email is not verified"
+
    },
    "REGISTER":{ 
       "PAGE_TITLE":"Register - Threefold Circle Cockpit",

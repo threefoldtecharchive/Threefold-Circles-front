@@ -55,7 +55,7 @@ urls = {
     "change-password": "/change-password/:token"
     "change-email": "/change-email/:token"
     "cancel-account": "/cancel-account/:token"
-    "register": ""
+    "register": "/register"
     "invitation": "/invitation/:token"
     "create-project": "/project/new"
     "create-project-scrum": "/project/new/scrum"

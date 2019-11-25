@@ -258,7 +258,7 @@ module.service("$tgAuth", AuthService)
 # message/link on login page.
 
 PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
-    template = templates.get("auth/login-text.html", true)
+     template = templates.get("auth/login-text.html", true)
 
     templateFn = ->
         publicRegisterEnabled = $config.get("publicRegisterEnabled")
@@ -276,14 +276,15 @@ PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
     return {
         restrict: "AE"
         scope: {}
-        template: templateFn
+       template: templateFn
     }
 
 module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeParams",
                                              "$tgTemplate", PublicRegisterMessageDirective])
 
 
-ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
+
+ThreeBotLoginDirective = ($auth, $routeParams, $route, $config,  $confirm, $translate, $location, $navUrls) ->
     link = ($el, $scope) ->    
         $.ajax($config.get('api') + "threebot/callback", {
             type: 'GET',  
@@ -292,13 +293,18 @@ ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
                 xhr.setRequestHeader("X-Session-Id",taiga.sessionId)
                 xhr.setRequestHeader("Content-Type", "application/json")
             data: $routeParams,
-            success: (res, status, xhr) -> $auth.threebot(res, $route)
-            error: (xhr, status, err) -> console.log(err)
+            success: (res) -> $auth.threebot(res, $route)
+            error: (xhr) -> 
+                if xhr.status == 400
+                    $location.path($navUrls.resolve("home"))
+                    $route.reload()
+                    $confirm.notify("light-error", $translate.instant("LOGIN_FORM.ERROR_MESSAGE"))
         });
 
     return {link:link}
 
-module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig", ThreeBotLoginDirective])
+module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig", "$tgConfirm", 
+                            "$translate", "$tgLocation", "$tgNavUrls", ThreeBotLoginDirective])
 
 LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $events, $translate, $window, $analytics) ->
     link = ($scope, $el, $attrs) ->    
