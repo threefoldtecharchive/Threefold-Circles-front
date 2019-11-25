@@ -1,0 +1,127 @@
+doctype html
+
+div.wrapper(
+    ng-controller="TaskDetailController as ctrl"
+    ng-init="section='backlog-kanban'"
+)
+    tg-project-menu
+
+    div.main.us-detail
+        div.us-detail-header.header-with-actions
+            include ../includes/components/mainTitle
+            .action-buttons
+                a.button-gray(
+                    href=""
+                    title="{{'TASK.TITLE_LINK_TASKBOARD' | translate}}"
+                    tg-check-permission="view_milestones"
+                    tg-nav="project-taskboard:project=project.slug,sprint=sprint.slug"
+                    ng-if="sprint && project.is_backlog_activated"
+                    translate="TASK.LINK_TASKBOARD"
+                )
+
+        section.us-story-main-data
+            header
+                tg-detail-header.detail-header-container(
+                    item="task"
+                    project="project"
+                    required-perm="modify_task"
+                    ng-class="{blocked: task.is_blocked}"
+                    ng-if="project && task"
+                    type="text"
+                )
+            .subheader
+                tg-tag-line.tags-block(
+                    ng-if="task && project"
+                    project="project"
+                    item="task"
+                    permissions="modify_task"
+                )
+                tg-created-by-display.ticket-created-by(ng-model="task")
+
+        section.duty-content
+            tg-item-wysiwyg(
+                type="task",
+                model="task",
+                required-perm="modify_task"
+            )
+
+        // Custom Fields
+        tg-custom-attributes-values(
+            ng-model="task"
+            type="task"
+            project="project"
+            required-edition-perm="modify_task"
+        )
+
+        tg-attachments-full(
+            obj-id="task.id"
+            type="task"
+            project-id="projectId"
+            edit-permission = "modify_task"
+        )
+
+        tg-history-section(
+            ng-if="task"
+            type="task"
+            name="task"
+            id="task.id"
+            project-id="projectId"
+        )
+
+    sidebar.menu-secondary.sidebar.ticket-data
+
+        section.ticket-header
+            span.ticket-title(
+                tg-task-status-display
+                ng-model="task"
+            )
+            span.detail-status(
+                tg-task-status-button
+                ng-model="task"
+            )
+
+        section.ticket-section(
+            tg-assigned-to
+            ng-model="task"
+            required-perm="modify_task"
+        )
+
+        section.ticket-section.ticket-watchers(
+            tg-watchers
+            item="task"
+            active-users="activeUsers"
+            on-watch="ctrl.onWatch"
+            on-unwatch="ctrl.onUnwatch"
+            required-perm="modify_task"
+        )
+
+        section.ticket-section.upvote-btn(
+            tg-vote-button
+            item="task",
+            on-upvote="ctrl.onUpvote",
+            on-downvote="ctrl.onDownvote"
+        )
+
+        section.ticket-section.ticket-detail-settings
+            tg-due-date(
+                due-date="task.due_date"
+                format="button"
+                is-closed="task.is_closed"
+                item="task"
+                obj-type="task"
+                tg-check-permission="modify_task"
+            )
+            tg-task-is-iocaine-button(ng-model="task")
+            tg-promote-to-us-button(
+                tg-check-permission="add_us",
+                ng-model="task"
+            )
+            tg-block-button(tg-check-permission="modify_task", ng-model="task")
+            tg-delete-button(
+                tg-check-permission="delete_task"
+                on-delete-title="{{'TASK.TITLE_DELETE_ACTION' | translate}}"
+                on-delete-go-to-url="onDeleteGoToUrl"
+                ng-model="task"
+            )
+
+    div.lightbox.lightbox-block(tg-lb-block, ng-model="task", title="TASK.LIGHTBOX_TITLE_BLOKING_TASK")

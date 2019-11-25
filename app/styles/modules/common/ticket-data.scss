@@ -1,0 +1,365 @@
+.ticket-header {
+    align-items: center;
+    display: flex;
+    margin: .75rem 0;
+    position: relative;
+    .ticket-title {
+        @include font-size(larger);
+        @include font-type(light);
+        text-transform: uppercase;
+        vertical-align: sub;
+    }
+    .detail-status {
+        @include font-size(small);
+        display: flex;
+        margin-left: .5rem;
+        position: relative;
+        .icon-arrow-down {
+            @include svg-size(.75rem);
+            fill: currentColor;
+            margin-left: .25rem;
+        }
+    }
+    .detail-status-inner {
+        align-items: center;
+        display: flex;
+        justify-content: flex-start;
+        > span {
+            color: $white;
+            padding: .15rem .25rem;
+            text-transform: uppercase;
+        }
+    }
+    .pop-status {
+        @include popover(150px, 1.25rem, 0, '', '');
+        padding: 0;
+        text-transform: none;
+        a {
+            @include font-type(text);
+            padding: .5rem 1rem;
+            text-align: left;
+        }
+        a:hover {
+            background: rgba($primary-light, .2);
+        }
+    }
+}
+
+.ticket-data-container {
+    @include font-size(small);
+    @include font-type(text);
+    .icon {
+        @include svg-size(.7rem);
+        color: currentColor;
+        margin-left: .25rem;
+    }
+}
+
+.ticket-section {
+    padding: 1.2rem 0;
+    width: 100%;
+    &:not(:last-child) {
+        border-bottom: 1px solid $gray-lighter;
+    }
+}
+
+.ticket-status {
+    &:last-child {
+        margin: 0;
+    }
+    .level {
+        display: inline-block;
+        margin-right: .5rem;
+        vertical-align: top;
+    }
+    .level-name {
+        color: $gray-light;
+        float: right;
+        text-transform: lowercase;
+    }
+    .clickable {
+        &:hover {
+            background: $gray-lighter;
+            transition: background .2s ease-in;
+        }
+    }
+    .type-data {
+        background: $whitish;
+        margin-bottom: .5rem;
+        padding: .5rem;
+        padding-right: 1rem;
+        position: relative;
+        transition: background .2s ease-in;
+        .pop-type {
+            @include popover(150px, 30px, 30px, '', '', 0, '', '', '', 15px, 'left');
+        }
+    }
+    .severity-data {
+        background: $whitish;
+        margin-bottom: .5rem;
+        padding: .5rem;
+        padding-right: 1rem;
+        position: relative;
+        transition: background .2s ease-in;
+        .pop-severity {
+            @include popover(150px, 30px, 30px, '', '', 0, '', '', '', 15px, 'left');
+        }
+    }
+    .priority-data {
+        background: $whitish;
+        margin-bottom: .5rem;
+        padding: .5rem;
+        padding-right: 1rem;
+        position: relative;
+        transition: background .2s ease-in;
+        .pop-priority {
+            @include popover(150px, 30px, 30px, '', '', 0, '', '', '', 15px, 'left');
+        }
+    }
+}
+
+.ticket-section-label {
+    @include font-type(semibold);
+    color: lighten($grayer, 11%);
+    flex-grow: 1;
+    font-size: .875rem;
+    text-transform: uppercase;
+}
+
+.ticket-section-unfold {
+    display: block;
+    line-height: 1.25rem;
+    text-align: center;
+    svg {
+        fill: $gray-light;
+    }
+    &:hover svg {
+        fill: lighten($gray-light, 15%);
+    }
+    &.active svg {
+        fill: $gray-lighter;
+    }
+    &.active:hover svg {
+        fill: darken($gray-lighter, 15%);
+    }
+}
+
+.loading-container {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    z-index: 99;
+    .loading-spinner {
+        max-height: 1.5rem;
+        max-width: 1.5rem;
+    }
+}
+
+.ticket-user-list-container {
+    position: relative;
+    .ticket-user-list-content.loading {
+        opacity: .5;
+        z-index: 98;
+    }
+}
+
+.ticket-user-list {
+    margin: .25rem 0 0;
+    .is-iocaine {
+        filter: hue-rotate(265deg) saturate(3);
+    }
+
+    .iocaine-symbol {
+        left: -.5rem;
+        position: absolute;
+        top: -.5rem;
+        z-index: 9;
+        svg {
+            background: $grayer;
+            border-radius: .25rem;
+            fill: $white;
+            min-height: 1.5rem;
+            min-width: 1.5rem;
+            padding: .25rem;
+        }
+    }
+    .user-list-single {
+        align-content: center;
+        align-items: center;
+        display: flex;
+        padding: .25rem 0;
+        width: 100%;
+        &:hover:not(.read-only) {
+            background: rgba($white, .4);
+            cursor: pointer;
+            .user-list-name {
+                color: $primary-light;
+            }
+            .remove-user {
+                opacity: 1;
+            }
+        }
+        &.read-only .user-list-name,
+        .read-only {
+            color: $gray;
+        }
+        &:not(.read-only) {
+            .user-list-name a {
+                color: $primary;
+            }
+            .user-list-name a:hover {
+                color: $primary-light;
+            }
+        }
+    }
+    .user-list-avatar {
+        flex-basis: 3rem;
+        margin-right: .25rem;
+        max-height: 3rem;
+        max-width: 3rem;
+        img {
+            width: 100%;
+        }
+    }
+    .user-list-name {
+        flex-grow: 1;
+        margin-left: .5rem;
+    }
+
+    .remove-user {
+        cursor: pointer;
+        fill: $gray;
+        margin-right: .75rem;
+        opacity: 0;
+        padding: .5rem;
+        transition: all .2s ease-in;
+        &:hover {
+            fill: $red;
+            transition: color .3s ease-in;
+        }
+        svg {
+            height: .9rem;
+            width: .9rem;
+        }
+    }
+}
+
+.ticket-users-actions {
+    display: flex;
+    margin: .5rem -.25rem 0;
+    .ticket-users-action {
+        background: $white;
+        color: $gray;
+        cursor: pointer;
+        display: flex;
+        flex-grow: 1;
+        font-size: .9rem;
+        justify-content: center;
+        line-height: 2rem;
+        margin: 0 .25rem;
+        text-align: center;
+        svg {
+            fill: $gray;
+            height: .75rem;
+            width: .75rem;
+        }
+        &:hover {
+            color: $primary-light;
+            svg {
+                fill: $primary-light;
+            }
+        }
+    }
+    .users-action.icon {
+        margin-right: .5rem;
+    }
+}
+
+.ticket-estimation .points-per-role {
+    margin: .5rem 0 0;
+}
+
+.ticket-detail-settings {
+    display: flex;
+    justify-content: center;
+    margin-right: -.5rem;
+    margin-top: 1rem;
+    label,
+    .assign-issue-button,
+    .item-block,
+    .item-unblock,
+    .promote-button,
+    .button-delete {
+        background: $gray-light;
+        display: inline-block;
+        margin-right: .5rem;
+        padding: 1rem;
+        transition: background .2s linear;
+        transition-delay: .1s;
+        &:hover {
+            background: $gray;
+        }
+        &.editable {
+            cursor: pointer;
+        }
+        +input {
+            display: none;
+        }
+    }
+
+    .assign-issue-button {
+        display: none;
+
+        &:hover {
+            background: $yellow-green;
+        }
+        &.is-active {
+            display: inline-block;
+        }
+        &.button-set:hover {
+            background: $red-light;
+        }
+    }
+
+    .item-block,
+    .item-unblock {
+        display: none;
+        &.is-active {
+            display: inline-block;
+        }
+    }
+    .item-unblock {
+        background: $red-light;
+        &:hover {
+            background: $red;
+        }
+    }
+    .button-delete {
+        background: $red-light;
+        &:hover {
+            background: $red;
+        }
+    }
+    img {
+        max-height: 1.25rem;
+        max-width: 1.25rem;
+        width: 100%;
+    }
+    svg {
+        fill: $white;
+        height: 100%;
+        max-height: 1.25rem;
+        max-width: 1.25rem;
+        stroke: $white;
+        width: 100%;
+    }
+    .icon-private {
+        margin: 0;
+    }
+    a {
+        display: block;
+    }
+}
