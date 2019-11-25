@@ -463,6 +463,8 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
         {templateUrl: "user/user-project-settings.html"})
     $routeProvider.when("/user-settings/mail-notifications",
         {templateUrl: "user/mail-notifications.html"})
+    $routeProvider.when("/user-settings/3bot-login-settings",
+        {templateUrl: "user/3bot-login-settings.html"})
     $routeProvider.when("/user-settings/live-notifications",
         {templateUrl: "user/live-notifications.html"})
     $routeProvider.when("/user-settings/web-notifications",
@@ -512,32 +514,33 @@ configure = ($routeProvider, $locationProvider, $httpProvider, $provide, $tgEven
     )
 
     # Auth
-    # $routeProvider.when("/login",
-    #     {
-    #         templateUrl: "auth/login.html",
-    #         title: "LOGIN.PAGE_TITLE",
-    #         description: "LOGIN.PAGE_DESCRIPTION",
-    #         disableHeader: true,
-    #         controller: "LoginPage",
-    #     }
-    # )
-
-    $routeProvider.when("/threebot",
+    $routeProvider.when("/login",
         {
-            templateUrl: "auth/threebot-login.html",
+            templateUrl: "auth/login.html",
             title: "LOGIN.PAGE_TITLE",
             description: "LOGIN.PAGE_DESCRIPTION",
             disableHeader: true,
-            controller: "LoginPage"
-        })
-    # $routeProvider.when("/register",
+            controller: "LoginPage",
+        }
+    )
+
+    # $routeProvider.when("/threebot",
     #     {
-    #         templateUrl: "auth/register.html",
-    #         title: "REGISTER.PAGE_TITLE",
-    #         description: "REGISTER.PAGE_DESCRIPTION",
-    #         disableHeader: true
-    #     }
-    # )
+    #         templateUrl: "auth/threebot-login.html",
+    #         title: "LOGIN.PAGE_TITLE",
+    #         description: "LOGIN.PAGE_DESCRIPTION",
+    #         disableHeader: true,
+    #         controller: "LoginPage"
+    #     })
+    $routeProvider.when("/threebot",
+        {
+            templateUrl: "auth/threebot-login.html",
+            title: "REGISTER.PAGE_TITLE",
+            description: "REGISTER.PAGE_DESCRIPTION",
+            disableHeader: true,
+            controller: "LoginPage"
+        }
+    )
     $routeProvider.when("/forgot-password",
         {
             templateUrl: "auth/forgot-password.html",

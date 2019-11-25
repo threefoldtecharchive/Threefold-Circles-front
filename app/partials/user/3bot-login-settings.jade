@@ -1,0 +1,60 @@
+doctype html
+
+div.wrapper(
+    tg-threebot-settings
+    ng-controller="User3botLoginController as ctrl"
+    ng-init="section='user-settings'"
+)
+    sidebar.menu-secondary.sidebar.settings-nav(tg-user-settings-navigation="3bot-settings")
+        include ../includes/modules/user-settings-menu
+
+    section.main.user-change-password
+        header
+            h1
+                span.green {{sectionName | translate}}
+
+        form(ng-show ="threeBotLogin")
+            fieldset
+                label(for="username" translate="USER_SETTINGS.THREEBOT_SETTINGS.USERNAME")
+                input(
+                    type="text"
+                    name="username"
+                    id="username"
+                    disabled
+                    value="{{ username }}"
+                )
+
+            fieldset
+                label(for="email" translate="USER_SETTINGS.THREEBOT_SETTINGS.EMAIL")
+                input(
+                    type="email"
+                    name="email"
+                    id="email"
+                    disabled
+                    value="{{ email }}"
+                )
+
+            fieldset
+                label(for="pubKey" translate="USER_SETTINGS.THREEBOT_SETTINGS.PUBLIC_KEY")
+                input(
+                    type="text"
+                    name="pubKey"
+                    id="pubKey"
+                    disabled
+                    value="{{ pubKey }}"
+                )
+            fieldset
+                button.button-green(
+                    ng-click="linkAccount()"
+                    type="button"
+                    title="{{'COMMON.DISCONNECT' | translate}}"
+                    translate="COMMON.DISCONNECT"
+                )
+
+        button.button-green(
+            ng-show ="!threeBotLogin"
+            ng-click="linkAccount()"
+            type="button"
+            title="{{'COMMON.CONNECT' | translate}}"
+            translate="COMMON.CONNECT"
+        )

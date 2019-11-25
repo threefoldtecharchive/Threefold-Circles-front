@@ -160,8 +160,9 @@ class AuthService extends taiga.Service
             @rootscope.$broadcast("auth:refresh", user)
             return user
 
-    login: (data) ->
+    login: (data, type) ->
         url = @urls.resolve("auth")
+
         data = _.clone(data, false)
         data.type = if type then type else "normal"
 
@@ -174,8 +175,7 @@ class AuthService extends taiga.Service
             @rootscope.$broadcast("auth:login", user)
             return user
 
-    threebot: (data, $route) ->        
-        @.removeToken()
+    threebot: (data, $route) -> 
         user = @model.make_model("users", data)
         @.setToken(user.auth_token)
         @.setUser(user)
@@ -285,9 +285,12 @@ module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeP
 
 ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
     link = ($el, $scope) ->    
-
         $.ajax($config.get('api') + "threebot/callback", {
-            type: 'GET',
+            type: 'GET',  
+            beforeSend: (xhr, settings) -> 
+                xhr.setRequestHeader("Authorization",'Bearer ' + "#{$auth.getToken()}")
+                xhr.setRequestHeader("X-Session-Id",taiga.sessionId)
+                xhr.setRequestHeader("Content-Type", "application/json")
             data: $routeParams,
             success: (res, status, xhr) -> $auth.threebot(res, $route)
             error: (xhr, status, err) -> console.log(err)
@@ -295,7 +298,7 @@ ThreeBotLoginDirective = ($auth, $routeParams, $route, $config) ->
 
     return {link:link}
 
-module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig",  ThreeBotLoginDirective])
+module.directive("tbLogin", ["$tgAuth", "$routeParams", "$route","$tgConfig", ThreeBotLoginDirective])
 
 LoginDirective = ($auth, $confirm, $location, $config, $routeParams, $navUrls, $events, $translate, $window, $analytics) ->
     link = ($scope, $el, $attrs) ->    
