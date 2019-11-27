@@ -257,20 +257,32 @@ module.service("$tgAuth", AuthService)
 # Directive that manages the visualization of public register
 # message/link on login page.
 
-PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
+SignUpLinkDirective = ($config, $http) ->
+    link = ->
+        $http.get($config.config.api + "threebot/login").then((data) -> 
+            console.log(data)
+        )
+            
+    return {link:link}
+
+module.directive("signUpLinkDirective", ["$tgConfig", "$http", SignUpLinkDirective])
+
+PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates , $http) ->
     template = templates.get("auth/login-text.html", true)
 
     templateFn = ->
         publicRegisterEnabled = $config.get("publicRegisterEnabled")
         if not publicRegisterEnabled
             return ""
-
-        url = $navUrls.resolve("register")
-
-        if $routeParams['force_next']
-            nextUrl = encodeURIComponent($routeParams['force_next'])
-            url += "?next=#{nextUrl}"
-
+        
+        link = $.ajax($config.get('api') + "threebot/login", {
+            type: 'GET',  
+            async: false,
+            success: (data) -> 
+                return data
+            error: (textStatus) -> console.log('Error', textStatus)
+        });
+        url = link.responseJSON.url
         return template({url:url})
 
     return {
@@ -280,7 +292,7 @@ PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
     }
 
 module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeParams",
-                                             "$tgTemplate", PublicRegisterMessageDirective])
+                                             "$tgTemplate", "$http", PublicRegisterMessageDirective])
 
 
 

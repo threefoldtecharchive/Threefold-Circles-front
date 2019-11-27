@@ -17,7 +17,7 @@
 # File: navigation-bar/navigation-bar.directive.coffee
 ###
 
-NavigationBarDirective = (currentUserService, navigationBarService, locationService, navUrlsService, config) ->
+NavigationBarDirective = (currentUserService, navigationBarService, locationService, navUrlsService, config, $route) ->
     link = (scope, el, attrs, ctrl) ->
         scope.vm = {}
 
@@ -41,6 +41,7 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
             error: (textStatus) ->
                 console.log('Error', textStatus)
             success: (data) ->
+                $route.reload()
                 window.location.href = data.url;
 
         scope.$on "$routeChangeSuccess", () ->
@@ -70,7 +71,8 @@ NavigationBarDirective.$inject = [
     "tgNavigationBarService",
     "$tgLocation",
     "$tgNavUrls",
-    "$tgConfig"
+    "$tgConfig",
+    "$route"
 ]
 
 angular.module("taigaNavigationBar").directive("tgNavigationBar", NavigationBarDirective)
