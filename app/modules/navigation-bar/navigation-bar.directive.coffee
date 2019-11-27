@@ -38,11 +38,10 @@ NavigationBarDirective = (currentUserService, navigationBarService, locationServ
             $.ajax url,
             type: 'GET'
 
-            error: (jqXHR, textStatus, errorThrown) ->
+            error: (textStatus) ->
                 console.log('Error', textStatus)
-            success: (data, textStatus, jqXHR) ->
-                locationService.url = data.url
-                window.location.href = locationService.url;
+            success: (data) ->
+                window.location.href = data.url;
 
         scope.$on "$routeChangeSuccess", () ->
             scope.vm.active = null

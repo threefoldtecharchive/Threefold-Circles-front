@@ -258,7 +258,7 @@ module.service("$tgAuth", AuthService)
 # message/link on login page.
 
 PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
-     template = templates.get("auth/login-text.html", true)
+    template = templates.get("auth/login-text.html", true)
 
     templateFn = ->
         publicRegisterEnabled = $config.get("publicRegisterEnabled")
@@ -276,7 +276,7 @@ PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates) ->
     return {
         restrict: "AE"
         scope: {}
-       template: templateFn
+        template: templateFn
     }
 
 module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeParams",
