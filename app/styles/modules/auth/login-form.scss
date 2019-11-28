@@ -10,7 +10,12 @@
             }
         }
     }
-
+    .orSpan {
+        display: block;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: .5rem;
+    }
     .forgot-pass {
         @include font-size(small);
         color: $gray;

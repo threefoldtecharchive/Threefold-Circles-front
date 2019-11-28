@@ -257,17 +257,33 @@ module.service("$tgAuth", AuthService)
 # Directive that manages the visualization of public register
 # message/link on login page.
 
-SignUpLinkDirective = ($config, $http) ->
-    link = ->
-        $http.get($config.config.api + "threebot/login").then((data) -> 
-            console.log(data)
-        )
-            
-    return {link:link}
+ThreebotLoginButton = ($config, templates) ->
+    template = templates.get("auth/threebot-login-btn.html", true)
 
-module.directive("signUpLinkDirective", ["$tgConfig", "$http", SignUpLinkDirective])
+    templateFn = ->
+        publicRegisterEnabled = $config.get("publicRegisterEnabled")
+        if not publicRegisterEnabled
+            return ""
+        
+        link = $.ajax($config.get('api') + "threebot/login", {
+            type: 'GET',  
+            async: false,
+            success: (data) -> 
+                return data
+            error: (textStatus) -> console.log('Error', textStatus)
+        });
+        url = link.responseJSON.url
+        return template({url:url})
 
-PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates , $http) ->
+    return {
+        restrict: "AE"
+        scope: {}
+        template: templateFn
+    }
+
+module.directive("tgThreebotLoginButton", ["$tgConfig", "$tgTemplate", ThreebotLoginButton])
+
+PublicRegisterMessageDirective = ($config, templates) ->
     template = templates.get("auth/login-text.html", true)
 
     templateFn = ->
@@ -291,10 +307,7 @@ PublicRegisterMessageDirective = ($config, $navUrls, $routeParams, templates , $
         template: templateFn
     }
 
-module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgNavUrls", "$routeParams",
-                                             "$tgTemplate", "$http", PublicRegisterMessageDirective])
-
-
+module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgTemplate", PublicRegisterMessageDirective])
 
 ThreeBotLoginDirective = ($auth, $routeParams, $route, $config,  $confirm, $translate, $location, $navUrls) ->
     link = ($el, $scope) ->    

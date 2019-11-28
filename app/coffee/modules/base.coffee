@@ -49,7 +49,6 @@ urls = {
 
     "discover": "/discover"
     "discover-search": "/discover/search"
-    "threebot": "https://login.threefold.me/"
     "login": "/login"
     "forgot-password": "/forgot-password"
     "change-password": "/change-password/:token"
