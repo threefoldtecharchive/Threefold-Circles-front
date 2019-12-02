@@ -13,7 +13,7 @@
     z-index: 999;
     .auth-container {
         flex-basis: 400px;
-        margin-top: 50px;
+        margin-top: 200px;
     }
     .logo-svg {
         text-align: center;
@@ -46,6 +46,7 @@
     }
     .login-text,
     .register-text {
+        text-align: center;
         margin-left: .5rem;
         a {
             text-decoration: underline;
