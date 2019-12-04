@@ -1,32 +1,37 @@
 doctype html
-html(lang="en", ng-attr-dir="{{ isRTL ? 'rtl' : 'ltr' }}")
+html(lang="en" ng-attr-dir="{{ isRTL ? 'rtl' : 'ltr' }}")
     head
         meta(charset="utf-8")
-        meta(http-equiv="content-type", content="text/html; charset=utf-8")
-        meta(name="fragment", content="!")
+        meta(http-equiv="content-type" content="text/html; charset=utf-8")
+        meta(name="fragment" content="!")
 
         // Main meta
         title ThreeFold Circles
-        meta(name="description", content="ThreeFold Circles Collaboration Tool")
-        meta(name="keywords", content="agile, scrum, ThreeFold Circles, management, project, developer, designer, user experience")
+        meta(name="description" content="ThreeFold Circles Collaboration Tool")
+        meta(name="keywords" content="agile, scrum, ThreeFold Circles, management, project, developer, designer, user experience")
 
-        //-meta(name="viewport", content="width=device-width, user-scalable=no")
-        link(rel="stylesheet", href="/#{v}/styles/theme-taiga.css")
-        link(rel="icon", type="image/png", href="/#{v}/images/favicon.png")
+        //-meta(name="viewport" content="width=device-width, user-scalable=no")
+        link(rel="stylesheet" href="/#{v}/styles/theme-taiga.css")
+        link(rel="icon" type="image/png" href="/#{v}/images/favicon.png")
 
         //- PRERENDER SERVICE: This is to know when the page is completely loaded.
         script(type='text/javascript').
             window.prerenderReady = false;
+
+        //- Init CRISP
+        script(type='text/javascript').
+            window.$crisp=[];window.CRISP_WEBSITE_ID="1a5a5241-91cb-4a41-8323-5ba5ec574da0";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();
+
 
     body(tg-main, ng-class="{'rtl': isRTL}")
         div(tg-navigation-bar, ng-if="!errorHandling.showingError")
         div(ng-if="!errorHandling.showingError")
             div.master(ng-view)
 
-        div(ng-if="errorHandling.notfound", ng-include="'error/not-found.html'")
-        div(ng-if="errorHandling.error", ng-include="'error/error.html'")
-        div(ng-if="errorHandling.permissionDenied", ng-include="'error/permission-denied.html'")
-        div(ng-if="errorHandling.blocked", ng-include="'projects/project/blocked-project.html'")
+        div(ng-if="errorHandling.notfound" ng-include="'error/not-found.html'")
+        div(ng-if="errorHandling.error" ng-include="'error/error.html'")
+        div(ng-if="errorHandling.permissionDenied" ng-include="'error/permission-denied.html'")
+        div(ng-if="errorHandling.blocked" ng-include="'projects/project/blocked-project.html'")
 
         div.lightbox.lightbox-generic-ask
             include partials/includes/modules/lightbox-generic-ask
