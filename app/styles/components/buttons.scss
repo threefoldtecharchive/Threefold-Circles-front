@@ -84,7 +84,6 @@
 a.button-green {
     @extend %button;
     background: $primary;
-    margin-bottom: 1rem;
     &:hover,
     &.active {
         background: $primary-light;
