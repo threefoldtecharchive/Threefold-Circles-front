@@ -89,16 +89,6 @@ div.wrapper(
                     )
                         option(value="", translate="USER_PROFILE.FIELD.LANGUAGE_DEFAULT")
 
-                 fieldset
-                    label(for="theme", translate="USER_PROFILE.FIELD.THEME")
-                    select(
-                        name="theme"
-                        id="theme"
-                        ng-model="theme"
-                        ng-options="availableTheme for availableTheme in availableThemes"
-                    )
-                        option(value="", translate="USER_PROFILE.FIELD.THEME_DEFAULT")
-
                 fieldset
                     label(for="bio", translate="USER_PROFILE.FIELD.BIO")
                     textarea(
