@@ -283,31 +283,32 @@ ThreebotLoginButton = ($config, templates) ->
 
 module.directive("tgThreebotLoginButton", ["$tgConfig", "$tgTemplate", ThreebotLoginButton])
 
-PublicRegisterMessageDirective = ($config, templates) ->
-    template = templates.get("auth/login-text.html", true)
+# PublicRegisterMessageDirective = ($config, templates) ->
+#     template = templates.get("auth/login-text.html", true)
 
-    templateFn = ->
-        publicRegisterEnabled = $config.get("publicRegisterEnabled")
-        if not publicRegisterEnabled
-            return ""
+#     templateFn = ->
+#         publicRegisterEnabled = $config.get("publicRegisterEnabled")
+#         if not publicRegisterEnabled
+#             return ""
         
-        link = $.ajax($config.get('api') + "threebot/login", {
-            type: 'GET',  
-            async: false,
-            success: (data) -> 
-                return data
-            error: (textStatus) -> console.log('Error', textStatus)
-        });
-        url = link.responseJSON.url
-        return template({url:url})
+#         link = $.ajax($config.get('api') + "threebot/login", {
+#             type: 'GET',  
+#             async: false,
+#             success: (data) -> 
+#                 return data
+#             error: (textStatus) -> console.log('Error', textStatus)
+#         });
+#         url = link.responseJSON.url
+#         console.log('register',url)
+#         return template({url:url})
 
-    return {
-        restrict: "AE"
-        scope: {}
-        template: templateFn
-    }
+#     return {
+#         restrict: "AE"
+#         scope: {}
+#         template: templateFn
+#     }
 
-module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgTemplate", PublicRegisterMessageDirective])
+# module.directive("tgPublicRegisterMessage", ["$tgConfig", "$tgTemplate", PublicRegisterMessageDirective])
 
 ThreeBotLoginDirective = ($auth, $routeParams, $route, $config,  $confirm, $translate, $location, $navUrls) ->
     link = ($el, $scope) ->    
