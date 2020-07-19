@@ -123,7 +123,7 @@
     "jquery": "^2.2.3",
     "jquery.flot.tooltip": "git+https://git@github.com/krzysu/flot.tooltip.git",
     "l.js": "git+https://git@github.com/juanfran/l.js.git",
-    "lodash": "^4.16.4",
+    "lodash": "^4.17.19",
     "markdown-it": "^8.0.1",
     "markdown-it-task-lists": "^1.4.1",
     "medium-editor": "^5.22.2",
