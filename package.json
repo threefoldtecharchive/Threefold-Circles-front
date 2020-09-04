@@ -135,7 +135,7 @@
     "pikaday": "^1.4.0",
     "prismjs": "^1.6.0",
     "raven-js": "^3.7.0",
-    "showdown": "^1.4.3",
+    "showdown": "^1.9.1",
     "to-markdown": "^3.0.1"
   }
 }
