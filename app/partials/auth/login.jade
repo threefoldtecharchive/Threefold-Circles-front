@@ -4,7 +4,10 @@ div.wrapper
     div.auth
         div.auth-container
             div.logo-svg
-                include ../../svg/logo-color.svg
-            h1.logo ThreeFold Circles
+                img(
+                    alt="3bot robot"
+                    src="/#{v}/images/3bot_robot.png"
+                )
+            p.logo You tried to access a protected web page, and that action requires you to login using one of our supported idenitification services listed below.
 
             include ../includes/modules/login-form

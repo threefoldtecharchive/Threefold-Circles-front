@@ -1,6 +1,7 @@
 .auth {
     @include triangled-bg;
-    align-items: start;
+    align-items: center;
+    // background: $primary;
     bottom: 0;
     display: flex;
     flex-direction: row;
@@ -13,20 +14,20 @@
     z-index: 999;
     .auth-container {
         flex-basis: 400px;
-        margin-top: 200px;
     }
     .logo-svg {
         text-align: center;
         width: 100%;
-        svg {
-            height: 8rem;
+        img {
+            height: auto;
             width: 8rem;
         }
     }
     .logo {
+        @include font-size(large);
         @include font-type(light);
-        color: $black;
-        font-size: 2.6rem;
+        // color: $white;
+        display: block;
         margin-bottom: 1rem;
         text-align: center;
     }
@@ -42,22 +43,23 @@
         margin-bottom: 1rem;
     }
     fieldset {
-        margin-bottom: .5rem;
+        margin-bottom: 0.5rem;
     }
     .login-text,
     .register-text {
+        font-size: 0.875rem;
+        margin-top: 2rem;
+        padding-bottom: 1rem;
         text-align: center;
-        margin: 1rem .5rem;
         a {
             text-decoration: underline;
-            font-weight: 600;
             &:hover {
                 color: $primary-light;
             }
         }
     }
     .register-terms {
-        margin: .5rem 0 .75rem;
+        margin: 0.5rem 0 0.75rem;
     }
     .button {
         color: $white;
@@ -76,14 +78,14 @@
     animation-iteration-count: infinite;
     animation-name: moustache;
     animation-timing-function: ease-in-out;
-    fill: rgba($primary, .9);
+    fill: rgba($primary, 0.9);
     stroke: $primary-light;
     stroke-width: 1px;
     transform-origin: 50% 50%;
-    transition: .3s;
+    transition: 0.3s;
     &:hover {
-        fill: rgba($primary-light, .9);
-        transition: .3s;
+        fill: rgba($primary-light, 0.9);
+        transition: 0.3s;
     }
 }
 

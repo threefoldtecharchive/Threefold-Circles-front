@@ -321,7 +321,7 @@
       "REGISTER":"Signup with 3BOT",
       "CREATE_ACCOUNT":"Signup with 3BOT",
       "OR": "Or",
-      "THREEBOT": "Login with 3Bot"
+      "THREEBOT": "Login via TF Connect"
    },
    "LOGIN_COMMON":{ 
       "HEADER":"I already have a Threefold Circle Cockpit login",
