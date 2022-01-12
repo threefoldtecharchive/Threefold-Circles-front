@@ -124,7 +124,7 @@
     "jquery.flot.tooltip": "git+https://git@github.com/krzysu/flot.tooltip.git",
     "l.js": "git+https://git@github.com/juanfran/l.js.git",
     "lodash": "^4.16.4",
-    "markdown-it": "^8.0.1",
+    "markdown-it": "^12.3.2",
     "markdown-it-task-lists": "^1.4.1",
     "medium-editor": "^5.22.2",
     "medium-editor-autolist": "git+https://github.com/gruberro/medium-editor-autolist.git#add-package-json",
